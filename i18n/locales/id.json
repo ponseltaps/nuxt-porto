@@ -4,5 +4,12 @@
     "about": "Tentang",
     "portfolio": "Portofolio",
     "contact": "Kontak"
+  },
+
+  "hero": {
+    "hallo": "HALO, SAYA KAMA",
+    "profession": "SAYA SEORANG FRONTEND DEVELOPER DAN DESAINER UI",
+    "btn-porto": "LIHAT PORTOFOLIO",
+    "btn-git": "HUBUNGI SAYA"
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <nav class="relative">
-    <div class="mx-auto fixed z-[1000] top-0 left-0 right-0 max-w-[1100px] px-8 bg-white lg:rounded-b-lg rounded-b-none drop-shadow">
+    <div class="mx-auto fixed z-[1000] top-0 left-0 right-0 max-w-[1100px] px-8 bg-white lg:rounded-b-lg rounded-b-none lg:drop-shadow">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
@@ -245,7 +245,7 @@
     </div>
 
     <div v-if="menus.mobile" class="sm:hidden bg-white drop-shadow" id="mobile-menu">
-      <div class="space-y-1 px-2 pb-3 pt-2">
+      <div class="space-y-1 px-2 pb-3 pt-[4.5rem]">
         <a
           href="#"
           class="block bg-sky-200 rounded-md px-3 py-2 text-sm font-semibold text-sky-800"

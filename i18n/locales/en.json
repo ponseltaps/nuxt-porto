@@ -4,5 +4,12 @@
     "about": "About",
     "portfolio": "Portfolio",
     "contact": "Contact"
+  },
+
+  "hero": {
+    "hallo": "HALLO, I’M KAMA",
+    "profession": "I’M A FRONTEND DEVELOPER\nAND UI DESIGN",
+    "btn-porto": "VIEW MY PORTFOLIO",
+    "btn-git": "GET IN TOUCH"
   }
 }
