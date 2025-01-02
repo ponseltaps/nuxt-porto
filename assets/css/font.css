@@ -1,0 +1,131 @@
+/* Font Montserrat Reguler */
+@font-face {
+  font-family: __myFont_head;
+  src: url("../fonts/_f_head_.woff2") format("woff2");
+  font-display: swap;
+}
+/* Font Montserrat medium */
+@font-face {
+  font-family: __myMont_medium;
+  src: url("../fonts/Mont-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* Font Montserrat semibold */
+@font-face {
+  font-family: __myMont_semibold;
+  src: url("../fonts/Mont-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+/* Font Montserrat bold */
+@font-face {
+  font-family: __myMont_bold;
+  src: url("../fonts/Mont-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Font untuk poppins */
+@font-face {
+  font-family: __myFont_body;
+  src: url("../fonts/_f_body_.woff2") format("woff2");
+  font-display: swap;
+}
+/* Font poppins medium */
+@font-face {
+  font-family: __myPopp_medium;
+  src: url("../fonts/Pop-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* Font poppins semibold */
+@font-face {
+  font-family: __myPopp_semibold;
+  src: url("../fonts/Pop-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+/* Font poppins bold */
+@font-face {
+  font-family: __myPopp_bold;
+  src: url("../fonts/Pop-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback font jika font utama tidak tersedia */
+@font-face {
+  font-family: __myFont_Fallback_m0p0;
+  src: local("Arial");
+  ascent-override: 106.43%;
+  descent-override: 27.96%;
+  line-gap-override: 9.39%;
+  size-adjust: 95.84%;
+}
+
+body {
+  font-family: __myFont_body, __myFont_Fallback_m0p0, sans-serif;
+  background-color: #0ea5e9;
+}
+
+nav,
+nav * {
+  font-family: __myFont_head, __myFont_Fallback_m0p0, sans-serif;
+}
+
+/* Font Montserrat */
+.font-mont {
+  font-family: __myFont_head, __myFont_Fallback_m0p0, sans-serif;
+}
+.mont-medium {
+  font-family: __myMont_medium, __myFont_Fallback_m0p0, sans-serif;
+}
+.mont-semibold {
+  font-family: __myMont_semibold, __myFont_Fallback_m0p0, sans-serif;
+}
+.mont-bold {
+  font-family: __myMont_bold, __myFont_Fallback_m0p0, sans-serif;
+}
+
+/* Font Poppins */
+.font-popp {
+  font-family: __myFont_body, __myFont_Fallback_m0p0, sans-serif;
+}
+.popp-medium {
+  font-family: __myPopp_medium, __myFont_Fallback_m0p0, sans-serif;
+}
+.popp-semibold {
+  font-family: __myPopp_semibold, __myFont_Fallback_m0p0, sans-serif;
+}
+.popp-bold {
+  font-family: __myPopp_bold, __myFont_Fallback_m0p0, sans-serif;
+}
+
+blockquote,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+  margin: 0;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
