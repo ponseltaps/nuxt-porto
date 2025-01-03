@@ -11,5 +11,28 @@
     "profession": "I’M A FRONTEND DEVELOPER\nAND UI DESIGN",
     "btn-porto": "VIEW MY PORTFOLIO",
     "btn-git": "GET IN TOUCH"
+  },
+
+  "service": {
+    "fe": "Frontend Developer",
+    "ui": "UI Design",
+    "dg": "Graphic Designer",
+    "from": "FROM",
+    "vision": "VISION",
+    "to": "TO",
+    "visual": "VISUALS",
+    "and": "AND",
+    "beyond": "BEYOND",
+    "btn-explore": "Explore more"
+  },
+
+  "tech": {
+    "read": "Read more"
+  },
+
+  "img-header": {
+    "about": "About",
+    "porto": "Portfolio",
+    "contact": "Contact"
   }
 }

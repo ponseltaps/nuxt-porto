@@ -1,36 +1,21 @@
 <template>
   <nav class="relative">
-    <div class="mx-auto fixed z-[1000] top-0 left-0 right-0 max-w-[1100px] px-8 bg-white lg:rounded-b-lg rounded-b-none lg:drop-shadow">
+    <div
+      class="mx-auto fixed z-[1000] top-0 left-0 right-0 max-w-[1100px] px-6 bg-white lg:rounded-b-lg rounded-b-none lg:drop-shadow">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
-          <button
-            type="button"
-            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-            aria-controls="mobile-menu"
-            aria-expanded="false"
-            @click="toggleMenu('mobile')"
-          >
+          <button type="button"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-sky-800 hover:bg-sky-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" @click="toggleMenu('mobile')">
             <span class="absolute -inset-0.5"></span>
             <span class="sr-only">Open main menu</span>
-            <svg
-              class="block size-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
+            <svg :class="menus.mobile ? 'hidden' : 'block'" class="size-6" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
-            <svg
-              class="hidden size-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
+            <svg :class="menus.mobile ? 'block' : 'hidden'" class="size-6" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
           </button>
@@ -41,29 +26,22 @@
           <div class="flex shrink-0 items-center">
             <NuxtLink to="/">
               <h1>
-                <img
-                  class="h-8 w-auto"
-                  src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
-                  alt="brand-logo"
-                />
+                <NuxtImg src="/logo-brand.svg" alt="logo" class="h-8 object-contain" />
               </h1>
             </NuxtLink>
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <NuxtLink
-                to="/"
-                class="px-3 py-2 border-b-2 border-sky-800 text-sm font-semibold text-sky-800"
-                aria-current="page"
-                >{{ $t("navbar.home") }}
+              <NuxtLink to="/" class="px-3 py-2 border-b-2 border-sky-800 text-sm mont-semibold text-sky-800"
+                aria-current="page">{{ $t("navbar.home") }}
               </NuxtLink>
-              <NuxtLink to="/" class="px-3 py-2 hover:border-b-2 border-sky-200 text-sm font-semibold text-sky-800"
-                >{{ $t("navbar.about") }}
+              <NuxtLink to="/" class="px-3 py-2 hover:border-b-2 border-sky-200 text-sm mont-medium text-sky-400">{{
+                $t("navbar.about") }}
               </NuxtLink>
-              <NuxtLink to="/" class="px-3 py-2 hover:border-b-2 border-sky-200 text-sm font-semibold text-sky-800"
-                >{{ $t("navbar.portfolio") }}
+              <NuxtLink to="/portfolio" class="px-3 py-2 hover:border-b-2 border-sky-200 text-sm mont-medium text-sky-400">{{
+                $t("navbar.portfolio") }}
               </NuxtLink>
-              <NuxtLink to="/" class="px-3 py-2 hover:border-b-2 border-sky-200 text-sm font-semibold text-sky-800">{{
+              <NuxtLink to="/" class="px-3 py-2 hover:border-b-2 border-sky-200 text-sm mont-medium text-sky-400">{{
                 $t("navbar.contact")
               }}</NuxtLink>
             </div>
@@ -72,44 +50,25 @@
         <div class="absolute flex items-center inset-y-0 right-0 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
           <!-- Language btn -->
           <div class="relative ml-3">
-            <button
-              type="button"
-              data-dropdown-toggle="language-dropdown-menu"
+            <button type="button" data-dropdown-toggle="language-dropdown-menu"
               class="inline-flex items-center font-semibold justify-center px-4 py-2 text-sm text-sky-800 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark dark:hover:text-white"
-              @click="toggleLanguageMenu"
-            >
-              <svg
-                v-if="language === 'en'"
-                aria-hidden="true"
-                class="h-5 w-5 rounded-full me-2"
-                xmlns="http://www.w3.org/2000/svg"
-                id="flag-icon-css-us"
-                viewBox="0 0 512 512"
-              >
+              @click="toggleLanguageMenu">
+              <svg v-if="language === 'en'" aria-hidden="true" class="h-5 w-5 rounded-full me-2"
+                xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-us" viewBox="0 0 512 512">
                 <g fill-rule="evenodd">
                   <g stroke-width="1pt">
-                    <path
-                      fill="#bd3d44"
+                    <path fill="#bd3d44"
                       d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
-                      transform="scale(3.9385)"
-                    />
-                    <path
-                      fill="#fff"
+                      transform="scale(3.9385)" />
+                    <path fill="#fff"
                       d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
-                      transform="scale(3.9385)"
-                    />
+                      transform="scale(3.9385)" />
                   </g>
                   <path fill="#192f5d" d="M0 0h98.8v70H0z" transform="scale(3.9385)" />
                 </g>
               </svg>
-              <svg
-                v-if="language === 'id'"
-                aria-hidden="true"
-                class="h-5 w-5 rounded-full me-2"
-                xmlns="http://www.w3.org/2000/svg"
-                id="flag-icon-css-id"
-                viewBox="0 0 512 512"
-              >
+              <svg v-if="language === 'id'" aria-hidden="true" class="h-5 w-5 rounded-full me-2"
+                xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-id" viewBox="0 0 512 512">
                 <!-- SVG untuk Indonesia -->
                 <g fill-rule="evenodd">
                   <path fill="#e30a17" d="M0 0h512v256H0z" />
@@ -120,39 +79,24 @@
             </button>
 
             <!-- Dropdown untuk memilih bahasa -->
-            <div
-              v-if="menus.language"
+            <div v-if="menus.language"
               class="origin-top-right w-max absolute right-0 mt-5 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="options-menu"
-            >
+              role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
               <ul class="py-2 font-medium" role="none">
                 <li>
-                  <div
-                    @click="changeLanguage('en')"
+                  <div @click="changeLanguage('en')"
                     class="cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-                    role="menuitem"
-                  >
+                    role="menuitem">
                     <div class="inline-flex items-center">
-                      <svg
-                        aria-hidden="true"
-                        class="h-3.5 w-3.5 rounded-full me-2"
-                        xmlns="http://www.w3.org/2000/svg"
-                        id="flag-icon-css-us"
-                        viewBox="0 0 512 512"
-                      >
+                      <svg aria-hidden="true" class="h-3.5 w-3.5 rounded-full me-2" xmlns="http://www.w3.org/2000/svg"
+                        id="flag-icon-css-us" viewBox="0 0 512 512">
                         <g fill-rule="evenodd">
-                          <path
-                            fill="#bd3d44"
+                          <path fill="#bd3d44"
                             d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
-                            transform="scale(3.9385)"
-                          />
-                          <path
-                            fill="#fff"
+                            transform="scale(3.9385)" />
+                          <path fill="#fff"
                             d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
-                            transform="scale(3.9385)"
-                          />
+                            transform="scale(3.9385)" />
                         </g>
                         <path fill="#192f5d" d="M0 0h98.8v70H0z" transform="scale(3.9385)" />
                       </svg>
@@ -161,19 +105,12 @@
                   </div>
                 </li>
                 <li>
-                  <div
-                    @click="changeLanguage('id')"
+                  <div @click="changeLanguage('id')"
                     class="cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-                    role="menuitem"
-                  >
+                    role="menuitem">
                     <div class="inline-flex items-center">
-                      <svg
-                        aria-hidden="true"
-                        class="h-3.5 w-3.5 rounded-full me-2"
-                        xmlns="http://www.w3.org/2000/svg"
-                        id="flag-icon-css-id"
-                        viewBox="0 0 512 512"
-                      >
+                      <svg aria-hidden="true" class="h-3.5 w-3.5 rounded-full me-2" xmlns="http://www.w3.org/2000/svg"
+                        id="flag-icon-css-id" viewBox="0 0 512 512">
                         <g fill-rule="evenodd">
                           <path fill="#e30a17" d="M0 0h512v256H0z" />
                           <path fill="#fff" d="M0 256h512v256H0z" />
@@ -244,14 +181,10 @@
       </div>
     </div>
 
-    <div v-if="menus.mobile" class="sm:hidden bg-white drop-shadow" id="mobile-menu">
+    <div v-if="menus.mobile" class="fixed sm:hidden bg-white w-full drop-shadow" id="mobile-menu">
       <div class="space-y-1 px-2 pb-3 pt-[4.5rem]">
-        <a
-          href="#"
-          class="block bg-sky-200 rounded-md px-3 py-2 text-sm font-semibold text-sky-800"
-          aria-current="page"
-          >{{ $t("navbar.home") }}</a
-        >
+        <a href="#" class="block bg-sky-200 rounded-md px-3 py-2 text-sm font-semibold text-sky-800"
+          aria-current="page">{{ $t("navbar.home") }}</a>
         <a href="#" class="block rounded-md px-3 py-2 text-sm font-semibold text-sky-800">{{ $t("navbar.about") }}</a>
         <a href="#" class="block rounded-md px-3 py-2 text-sm font-semibold text-sky-800">{{
           $t("navbar.portfolio")

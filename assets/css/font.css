@@ -35,6 +35,14 @@
   src: url("../fonts/_f_body_.woff2") format("woff2");
   font-display: swap;
 }
+/* Font poppins light */
+@font-face {
+  font-family: __myPopp_light;
+  src: url("../fonts/Pop-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 /* Font poppins medium */
 @font-face {
   font-family: __myPopp_medium;
@@ -97,6 +105,9 @@ nav * {
 /* Font Poppins */
 .font-popp {
   font-family: __myFont_body, __myFont_Fallback_m0p0, sans-serif;
+}
+.popp-light {
+  font-family: __myPopp_light, __myFont_Fallback_m0p0, sans-serif;
 }
 .popp-medium {
   font-family: __myPopp_medium, __myFont_Fallback_m0p0, sans-serif;
