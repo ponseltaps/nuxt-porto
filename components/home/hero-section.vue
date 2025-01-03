@@ -1,6 +1,6 @@
 <script setup>
-import buttonSolid from './button-solid.vue';
-import buttonBOutline from './button-b-outline.vue';
+import buttonBOutline from '../button-b-outline.vue';
+import buttonSolid from '../button-solid.vue';
 </script>
 
 <template>
@@ -8,15 +8,15 @@ import buttonBOutline from './button-b-outline.vue';
     <div class="flex flex-row h-full">
         <div class="flex flex-col justify-center lg:w-1/2 md:w-3/4 w-full">
           <h3 class="text-xl mont-semibold text-sky-800 mb-6">{{ $t("hero.hallo") }}</h3>
-          <h2 class="text-[30px] mont-bold text-sky-800 mb-12 whitespace-pre-line">{{ $t("hero.profession") }}</h2>
+          <h2 class="text-3xl mont-bold text-sky-800 mb-12 whitespace-pre-line">{{ $t("hero.profession") }}</h2>
           <p class="text-base font-popp text-sky-800 mb-12">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius est eligendi ullam maxime earum
             excepturi repellat cupiditate quis labore laborum perferendis, corrupti, aut quidem?
           </p>
           <div class="mb-4 flex sm:flex-none flex-col sm:flex-row">
-            <ButtonSolid class="w-fit mb-5 sm:mb-0">
+            <buttonSolid class="w-fit mb-5 sm:mb-0">
               {{ $t("hero.btn-porto") }}
-            </ButtonSolid>
+            </buttonSolid>
             <buttonBOutline class="lg:ms-12 sm:ms-7 ms-0 w-fit">
               {{ $t("hero.btn-git") }}
             </buttonBOutline>

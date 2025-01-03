@@ -11,5 +11,28 @@
     "profession": "SAYA SEORANG FRONTEND DEVELOPER DAN DESAINER UI",
     "btn-porto": "LIHAT PORTOFOLIO",
     "btn-git": "HUBUNGI SAYA"
+  },
+
+  "service": {
+    "fe": "Developer Frontend",
+    "ui": "Desain UI",
+    "dg": "Desainer Grafis",
+    "btn-explore": "Jelajahi Lainnya",
+    "from": "DARI",
+    "vision": "VISI",
+    "to": "KE",
+    "visual": "VISUAL",
+    "and": "DAN",
+    "beyond": "LEBIH JAUH"
+  },
+
+  "tech":{
+    "read":"Selengkapnya"
+  },
+
+  "img-header": {
+    "about": "Tentang Saya",
+    "porto": "Portofolio",
+    "contact": "Hubungi Saya"
   }
 }
