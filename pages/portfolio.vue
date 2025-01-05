@@ -15,6 +15,6 @@ import imageUrl from '@/assets/images/web-desain-bg.png';
 
 
 <script setup>
-import imgHeader from '../components/portfolio/img-header.vue';
+import imgHeader from '../components/img-header.vue';
 import portfolioSection from '~/components/portfolio/portfolio-section.vue';
 </script>

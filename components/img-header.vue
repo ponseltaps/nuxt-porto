@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-center items-center h-[250px] bg-top bg-contain" :style="{ backgroundImage: 'url(' + imageUrl + ')' }">
-      <h3 class="text-4xl text-white font-bold">{{ title }}</h3>
+      <h1 class="text-4xl text-white font-bold">{{ title }}</h1>
     </div>
   </template>
   
