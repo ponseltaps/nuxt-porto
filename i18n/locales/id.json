@@ -26,13 +26,27 @@
     "beyond": "LEBIH JAUH"
   },
 
-  "tech":{
-    "read":"Selengkapnya"
+  "tech": {
+    "read": "Selengkapnya"
   },
 
   "img-header": {
     "about": "Tentang Saya",
     "porto": "Portofolio",
     "contact": "Hubungi Saya"
+  },
+
+  "porto": {
+    "porto": "Portofolio",
+    "all" : "Semua",
+    "wd": "Website",
+    "ui": "Desain UI",
+    "gd": "Desain Grafis",
+    "my-work":"Jelajahi Semua Karya Saya",
+    "span-more": "Lainnya"
+  },
+
+  "contact": {
+    "contact" : "Hubungi Saya"
   }
 }

@@ -9,12 +9,15 @@
 import imageUrl from '@/assets/images/web-desain-bg.png';
 </script> -->
 <template>
-    <imgHeader imageUrl="@/assets/images/web-desain-bg.png" title="Portfolio" />
+    <imgHeader :imageUrl=imageUrl :title="$t('porto.porto')" />
     <portfolioSection/>
 </template>
 
 
 <script setup>
-import imgHeader from '../components/img-header.vue';
+import imgHeader from '~/components/img-header.vue';
 import portfolioSection from '~/components/portfolio/portfolio-section.vue';
+import portoBg from '@/assets/images/web-desain-bg.png';
+
+const imageUrl = portoBg;
 </script>
