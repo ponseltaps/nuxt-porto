@@ -34,7 +34,7 @@
               <NuxtLink to="/" class="px-3 py-2 text-sm mont-medium text-sky-400 hover:border-b-2 hover:border-sky-200"
                 exact-active-class="border-b-2 border-sky-800 text-sky-800 mont-bold">{{ $t("navbar.home") }}
               </NuxtLink>
-              <NuxtLink to="/test"
+              <NuxtLink to="/about-me"
                 class="px-3 py-2 text-sm mont-medium text-sky-400 hover:border-b-2 hover:border-sky-200"
                 exact-active-class="border-b-2 border-sky-800 text-sky-800 mont-bold">
                 {{
@@ -45,7 +45,7 @@
                 exact-active-class="border-b-2 border-sky-800 text-sky-800 mont-bold">{{
                   $t("navbar.portfolio") }}
               </NuxtLink>
-              <NuxtLink to="/test"
+              <NuxtLink to="/contact"
                 class="px-3 py-2 text-sm mont-medium text-sky-400 hover:border-b-2 hover:border-sky-200"
                 exact-active-class="border-b-2 border-sky-800 text-sky-800 mont-bold">{{
                   $t("navbar.contact")
@@ -56,7 +56,7 @@
         <div class="absolute flex items-center inset-y-0 right-0 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
           <!-- Language btn -->
           <div class="relative ml-3">
-            <button type="button" data-dropdown-toggle="language-dropdown-menu"
+            <button type="button"
               class="inline-flex items-center font-semibold justify-center px-4 py-2 text-sm text-sky-800 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark dark:hover:text-white"
               @click="toggleLanguageMenu">
               <svg v-if="language === 'en'" aria-hidden="true" class="h-5 w-5 rounded-full me-2"
@@ -190,13 +190,13 @@
     <div v-if="menus.mobile" class="fixed sm:hidden bg-white w-full drop-shadow" id="mobile-menu">
       <div class="space-y-1 px-2 pb-3 pt-[4.5rem]">
         <!-- Bagitu juga pada mobile, jika altif memiliki classbg-sky-200 -->
-        <a href="#" class="block bg-sky-200 rounded-md px-3 py-2 text-sm font-semibold text-sky-800"
+        <a href="/" class="block bg-sky-200 rounded-md px-3 py-2 text-sm font-semibold text-sky-800"
           aria-current="page">{{ $t("navbar.home") }}</a>
-        <a href="#" class="block rounded-md px-3 py-2 text-sm font-semibold text-sky-800">{{ $t("navbar.about") }}</a>
-        <a href="#" class="block rounded-md px-3 py-2 text-sm font-semibold text-sky-800">{{
+        <a href="/about-me" class="block rounded-md px-3 py-2 text-sm font-semibold text-sky-800">{{ $t("navbar.about") }}</a>
+        <a href="/portfolio" class="block rounded-md px-3 py-2 text-sm font-semibold text-sky-800">{{
           $t("navbar.portfolio")
         }}</a>
-        <a href="#" class="block rounded-md px-3 py-2 text-sm font-semibold text-sky-800">{{ $t("navbar.contact") }}</a>
+        <a href="/contact" class="block rounded-md px-3 py-2 text-sm font-semibold text-sky-800">{{ $t("navbar.contact") }}</a>
       </div>
     </div>
   </nav>

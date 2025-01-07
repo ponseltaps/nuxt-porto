@@ -34,5 +34,19 @@
     "about": "About",
     "porto": "Portfolio",
     "contact": "Contact"
+  },
+
+  "porto": {
+    "porto" : "Portfolio",
+    "all" : "All",
+    "wd": "Web Development",
+    "ui": "UI Design",
+    "gd": "Graphic Design",
+    "my-work":"Explore All My Work",
+    "span-more": "More"
+  },
+
+  "contact": {
+    "contact" : "Contact"
   }
 }

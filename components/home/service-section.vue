@@ -6,7 +6,7 @@ import buttonSolid from '../button-solid.vue';
     <div class="min-[1105px]:px-[133px] md:px-16 px-8 mt-[70px] mb-28">
         <div class="flex md:flex-row flex-col justify-between w-full gap-x-6">
             <!-- card service -->
-            <div class="flex flex-col md:w-[500px] w-full md:order-1 order-2 bg-sky-800 rounded-xl px-7 py-12 gap-y-7">
+            <div class="flex flex-col md:w-[500px] w-full md:order-1 order-2 bg-sky-950 rounded-xl px-7 py-12 gap-y-7">
                 <div
                     class="card flex items-center self-stretch px-5 py-4 rounded-md gap-x-5 bg-white bg-opacity-50 shadow-[0px_0px_8px_0px_rgba(0,0,0,0.50)_inset]">
                     <NuxtImg src="/coding-img.png" alt="profile-photo" class="w-24 object-contain" />
