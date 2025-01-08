@@ -37,16 +37,40 @@
   },
 
   "porto": {
-    "porto" : "Portfolio",
-    "all" : "All",
+    "porto": "Portfolio",
+    "all": "All",
     "wd": "Web Development",
     "ui": "UI Design",
     "gd": "Graphic Design",
-    "my-work":"Explore All My Work",
+    "my-work": "Explore All My Work",
     "span-more": "More"
   },
 
   "contact": {
-    "contact" : "Contact"
+    "contact": "Contact",
+    "git": "Get in touch",
+    "contact-desc": "I’d love to hear from you. Whether you have questions, feedback, or simply want to say hello, feel free to reach out. I’m here to assist you and ensure your experience is seamless and enjoyable.",
+    "submit": "Submit",
+    "field": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "message": "Message"
+    },
+    "placeholder": {
+      "name": "Input Name",
+      "email": "Input Email",
+      "phone": "Input Phone Number"
+    }
+  },
+
+  "about": {
+    "about": "About Me",
+    "tab":{
+      "header": "PROFESSIONAL EXPERIENCE & EDUCATION",
+      "experience": "Experience",
+      "education": "Education"
+    },
+    "tool":"MY TOOLS & SKILLS"
   }
 }
