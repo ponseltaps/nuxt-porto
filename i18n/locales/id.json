@@ -38,15 +38,39 @@
 
   "porto": {
     "porto": "Portofolio",
-    "all" : "Semua",
+    "all": "Semua",
     "wd": "Website",
     "ui": "Desain UI",
     "gd": "Desain Grafis",
-    "my-work":"Jelajahi Semua Karya Saya",
+    "my-work": "Jelajahi Semua Karya Saya",
     "span-more": "Lainnya"
   },
 
   "contact": {
-    "contact" : "Hubungi Saya"
+    "contact": "Kontak",
+    "git": "Hubungi Saya",
+    "contact-desc": "Senang menerima kabar. Jika ada pertanyaan, masukan, atau sekadar ingin berbagi cerita, jangan ragu untuk menghubungi. Siap memberikan bantuan dan memastikan pengalaman yang menyenangkan bagi Anda.",
+    "submit": "Simpan",
+    "field": {
+      "name": "Nama",
+      "email": "Email",
+      "phone": "Nomor Telepon",
+      "message": "Pesan"
+    },
+    "placeholder": {
+      "name": "Masukan Nama",
+      "email": "Masukan Email",
+      "phone": "Masukan Nomor Telepon"
+    }
+  },
+
+  "about": {
+    "about": "Tentang Saya",
+    "tab": {
+      "header": "KARIR PROFESIONAL & RIWAYAT PENDIDIKAN",
+      "experience": "Pengalaman",
+      "education": "Pendidikan"
+    },
+    "tool": "KEAHLIAN & ALAT YANG DIGUNAKAN"
   }
 }
