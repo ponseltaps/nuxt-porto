@@ -14,10 +14,10 @@ import buttonSolid from '../button-solid.vue';
             excepturi repellat cupiditate quis labore laborum perferendis, corrupti, aut quidem?
           </p>
           <div class="mb-4 flex sm:flex-none flex-col sm:flex-row">
-            <buttonSolid class="w-fit mb-5 sm:mb-0">
+            <buttonSolid href="/portfolio" class="w-fit mb-5 sm:mb-0">
               {{ $t("hero.btn-porto") }}
             </buttonSolid>
-            <buttonBOutline class="lg:ms-12 sm:ms-7 ms-0 w-fit">
+            <buttonBOutline href="/contact" class="lg:ms-12 sm:ms-7 ms-0 w-fit">
               {{ $t("hero.btn-git") }}
             </buttonBOutline>
           </div>

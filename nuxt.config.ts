@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     dir: "assets/images",
   },
 
-  plugins: ["~/plugins/sweetalert2.js", "~/plugins/flowbite.js"],
+  plugins: ["~/plugins/sweetalert2.js", "~/plugins/flowbite.js",],
 
   modules: ["@nuxtjs/i18n", "@nuxt/image"],
 

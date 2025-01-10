@@ -41,7 +41,7 @@ import buttonSolid from '../button-solid.vue';
             <div class="flex flex-col justify-center md:w-[430px] w-full md:order-2 order-1 md:mb-0 mb-12">
                 <h3 class="text-3xl mont-semibold text-white">{{ $t("service.from") }} <span class="text-sky-800">{{ $t("service.vision") }}</span
                         class="text-sky-800"> {{ $t("service.to") }}
-                    <span class="text-sky-800">{{ $t("service.vision") }}</span>, {{ $t("service.and") }}
+                    <span class="text-sky-800">{{ $t("service.visual") }}</span>, {{ $t("service.and") }}
                     <span class="text-sky-800">{{ $t("service.beyond") }}</span>
                 </h3>
                 <div class="my-6">
@@ -54,7 +54,7 @@ import buttonSolid from '../button-solid.vue';
                         ratione magnam, assumenda adipisci at corporis quo. Aliquid accusamus ipsam, impedit blanditiis
                         omnis explicabo odit id, sed et soluta asperiores fugit. Eveniet nam repellat eius veniam?</p>
                 </div>
-                <buttonSolid class="w-fit">
+                <buttonSolid href="/portfolio" class="w-fit">
                     {{ $t("service.btn-explore") }}
                 </buttonSolid>
             </div>
