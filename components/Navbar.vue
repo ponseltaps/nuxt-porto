@@ -2,7 +2,7 @@
   <nav class="relative">
     <div
       :class="{
-        'bg-opacity-50 backdrop-blur-lg w-full px-24': isScrolled && windowWidth >= 640, // Efek kaca saat scroll di atas 640px
+        'bg-opacity-50 backdrop-blur-lg w-full md:px-24 px-4': isScrolled && windowWidth >= 640, // Efek kaca saat scroll di atas 640px
         'max-w-[1100px] px-6 lg:rounded-b-lg': !isScrolled, // Maksimal lebar 1100px saat tidak scroll
       }"
       class="mx-auto fixed z-[999] top-0 left-0 right-0 bg-white rounded-b-none lg:drop-shadow transition-all duration-300"

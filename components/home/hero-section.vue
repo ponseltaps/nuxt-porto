@@ -22,8 +22,8 @@ import buttonSolid from '../button-solid.vue';
             </buttonBOutline>
           </div>
         </div>
-        <div class="md:flex hidden justify-end items-end md:w-1/2 w-1/4">
-          <NuxtImg src="/foto-hero.png" alt="profile-photo" class="lg:w-[360px] max-[1105px]:w-[300px] md:w-[250px] object-contain" />
+        <div class="md:flex hidden -mr-10 justify-end items-end md:w-1/2 w-1/4">
+          <NuxtImg src="/foto-hero.svg" format="webp" alt="profile-photo" class="hover:drop-shadow-2xl lg:w-[500px] max-[1105px]:w-[300px] md:w-[250px] object-contain" />
         </div>
     </div>
   </div>
