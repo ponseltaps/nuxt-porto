@@ -61,6 +61,21 @@
       "name": "Masukan Nama",
       "email": "Masukan Email",
       "phone": "Masukan Nomor Telepon"
+    },
+    "required": {
+      "name": "Nama harus diisi.",
+      "email": "Email harus diisi.",
+      "phone": "Nomor telepon harus diisi.",
+      "message": "Pesan harus diisi."
+    },
+    "invalid": {
+      "name": "Nama hanya boleh mengandung huruf dan spasi.",
+      "email": "Masukkan email yang valid.",
+      "phone": "Nomor telepon hanya boleh mengandung angka dan spasi."
+    },
+    "alert": {
+      "title": "Berhasil",
+      "description": "Formulir Berhasil Melewati Validasi!"
     }
   },
 
