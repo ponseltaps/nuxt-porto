@@ -61,16 +61,31 @@
       "name": "Input Name",
       "email": "Input Email",
       "phone": "Input Phone Number"
+    },
+    "required": {
+      "name": "Name is required.",
+      "email": "Email is required.",
+      "phone": "Phone number is required.",
+      "message": "Message is required."
+    },
+    "invalid": {
+      "name": "Name can only contain letters and spaces.",
+      "email": "Please enter a valid email address.",
+      "phone": "Phone number can only contain numbers."
+    },
+    "alert": {
+      "title": "Success",
+      "description": "The Form Has Successfully Passed Validation!"
     }
   },
 
   "about": {
     "about": "About Me",
-    "tab":{
+    "tab": {
       "header": "PROFESSIONAL EXPERIENCE & EDUCATION",
       "experience": "Experience",
       "education": "Education"
     },
-    "tool":"MY TOOLS & SKILLS"
+    "tool": "MY TOOLS & SKILLS"
   }
 }
