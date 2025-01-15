@@ -9,25 +9,41 @@
   "hero": {
     "hallo": "HALLO, I’M KAMA",
     "profession": "I’M A FRONTEND DEVELOPER\nAND UI DESIGN",
-    "btn-porto": "VIEW MY PORTFOLIO",
-    "btn-git": "GET IN TOUCH"
+    "subhead": "Driven by the passion for design and development, each project is crafted with precision to solve real-world problems while delivering a memorable experience for users.",
+    "btn-porto": "Explore My Works",
+    "btn-git": "Get In Touch"
   },
 
   "service": {
     "fe": "Frontend Developer",
+    "fe-desc": "Building fast, responsive, and dynamic websites with the latest web technologies to ensure seamless user experiences across all devices.",
     "ui": "UI Design",
+    "ui-desc": "Designing modern and user-friendly interfaces that balance aesthetics and functionality, ensuring an engaging experience for audience.",
     "dg": "Graphic Designer",
+    "dg-desc": "Stunning graphic design to increase brand appeal. From posters to digital assets, it is a complete solution for all business visual needs.",
     "from": "FROM",
     "vision": "VISION",
     "to": "TO",
     "visual": "VISUALS",
     "and": "AND",
     "beyond": "BEYOND",
+    "paragraph-1": "Digital experiences start with a simple idea, but bringing that idea to life requires a blend of creativity, strategy, and innovation. Every solution begins by understanding user needs and business goals, then translating them into intuitive designs and functional products. Every interface is crafted to capture attention, every interaction is designed to keep users engaged, and every element is optimized to deliver real value.",
+    "paragraph-2": "In today’s fast-evolving digital landscape, a balance between form and function is essential. A successful project doesn’t just look good — it solves problems, improves usability, and enhances overall experiences. From websites to apps, every project is built with precision and purpose to transform complex ideas into simple, elegant, and impactful solutions that drive meaningful outcomes.",
     "btn-explore": "Explore more"
   },
 
   "tech": {
-    "read": "Read more"
+    "read": "Read more",
+    "tech-behind": "THE TECH BEHIND THIS PROJECT",
+    "nuxt-3": {
+      "description": "Nuxt is an open source framework that makes web development intuitive and powerful. Create performant and production-grade full-stack web apps and websites with confidence."
+    },
+    "tailwind": {
+      "description": "Tailwind CSS is a utility-first CSS framework that enables developers to build highly customizable and responsive user interfaces quickly. By using pre-defined utility classes directly in your HTML, Tailwind eliminates the need for"
+    },
+    "sweetalert": {
+      "description": "SweetAlert2 is a JavaScript library used to create attractive and interactive pop-ups on web pages, with modern and customizable designs."
+    }
   },
 
   "img-header": {
@@ -81,11 +97,64 @@
 
   "about": {
     "about": "About Me",
+    "desc-section": "Every project presents an opportunity to turn ideas into impactful digital products. By combining creativity, precision and the latest technology, Develop websites that not only have stunning aesthetics but also deliver outstanding performance. My mission is to create digital experiences that captivate and inspire users. Building a strong online presence goes beyond visual appeal; it's about creating meaningful interactions that leave a lasting impression. From the intuitive interface to the seamless user journey, every element is designed with purpose. Embracing the dynamic nature of technology ensures our solutions remain relevant, scalable and future-ready. Driven by a passion for problem solving and a dedication to continuous improvement, I approach every project with curiosity and innovation. My goal is to turn complex challenges into simple, elegant solutions and drive success in the digital world.",
     "tab": {
       "header": "PROFESSIONAL EXPERIENCE & EDUCATION",
       "experience": "Experience",
       "education": "Education"
     },
     "tool": "MY TOOLS & SKILLS"
+  },
+
+  "experience": {
+    "bgi": {
+      "jobdesc-1": "Communicate information about machine issues to the relevant branches.",
+      "jobdesc-2": "Summarize the explanations from the branch teams based on their follow-up reports.",
+      "jobdesc-3": "Maintain communication with each branch through Telegram chat or phone calls.",
+      "jobdesc-4": "Compile monitoring data regularly according to the company's format and guidelines",
+      "jobdesc-5": "Create daily monitoring reports.",
+      "jobdesc-6": "Create daily second-level maintenance reports.",
+      "jobdesc-7": "Record and report critical machine issues, such as spare part damage, to the division head."
+    },
+    "tcid": {
+      "jobdesc-1": "Develop a landing page.",
+      "jobdesc-2": "Use Bootstrap and Tailwind CSS for styling the website.",
+      "jobdesc-3": "Build the website using Nuxt 3 and Laravel 11.",
+      "jobdesc-4": "Create monthly report presentations using PowerPoint with data from Google Analytics.",
+      "jobdesc-5": "Monitor SMS success or failure on a website.",
+      "jobdesc-6": "Create documents such as BRD (Business Requirements Document), use cases, activity diagrams, knowledge base, and others."
+    }
+  },
+
+  "education": {
+    "lp3i": {
+      "learning-1": "Studied UI/UX design for applications and websites.",
+      "learning-2": "Learned web programming using CodeIgniter 4.",
+      "learning-3": "Studied mobile programming with React Native.",
+      "learning-4": "Gained knowledge in database management with MySQL.",
+      "learning-5": "Learned basic office skills."
+    },
+    "alas": {
+      "learning-1": "Learned the use of CorelDRAW and Photoshop for graphic design.",
+      "learning-2": "Studied design techniques and layout settings for printing purposes.",
+      "learning-3": "Gained knowledge in audio and video editing.",
+      "learning-4": "Learned the basics of HTML."
+    }
+  },
+
+  "post": {
+    "back": "Back",
+    "nuxt-3": {
+      "title": "Nuxt 3",
+      "description": "This website is built using Nuxt 3, a modern framework based on Vue.js designed to simplify the creation of fast, efficient, and SEO-friendly web applications. Nuxt 3 offers a variety of outstanding features that make it the ideal choice for developers looking to build high-performance web applications that are easily accessible to users. One of the main advantages of Nuxt 3 is its ability to perform server-side rendering (SSR), which allows web pages to load faster and more efficiently. This not only enhances the user experience but also helps with search engine optimization (SEO), making the website easier to find across various search platforms. With all the convenience and advanced features that Nuxt 3 offers, I can build this website more efficiently, achieve high performance, and ensure the website runs smoothly on different devices. Another benefit is its ability to perform pre-rendering and automatic image optimization, further speeding up page load times and improving overall performance. This website is not only designed to provide an exceptional experience for visitors, but also built with technology that makes maintenance and future development easier. So, when you visit this website, you not only see an attractive design but also experience the speed and stability provided by Nuxt 3 as its core foundation."
+    },
+    "tailwind": {
+      "title": "Tailwind",
+      "description": "This website is built using Tailwind CSS, a utility-first CSS framework that enables me to design interfaces faster, more flexibly, and in a more structured way. Tailwind CSS offers a different approach compared to other CSS frameworks because it provides a set of utility classes that can be directly used in HTML. By using Tailwind, I can adjust margins, paddings, colors, typography, and many other design elements very efficiently without writing custom CSS. This enables faster website development while giving complete control over the design without the need to write lengthy and complex CSS code. Responsive and dynamic designs can be created simply by using the classes provided by Tailwind, so this website looks perfect across different devices, from desktops to smartphones.\n\nIn addition, to make the website more interactive and dynamic, I also use v-bind from Vue.js. v-bind allows us to bind dynamic data to HTML attributes such as CSS classes, IDs, or inline styles directly from Vue components. By combining v-bind with Tailwind CSS, I can make elements on the website respond to user interactions in real-time. For example, we can change the color, size, or even transition effects of an element based on certain conditions or user actions, such as hover or click. This approach makes the website feel more alive and responsive to user input, creating a more interactive and engaging experience."
+    },
+    "sweetalert": {
+      "title": "Sweet Alert 2",
+      "description": "On this website, we use SweetAlert2, a popular JavaScript library for displaying attractive and interactive notifications. SweetAlert2 offers a better user experience compared to the standard browser alert because of its more appealing and interactive design, as well as providing full control over the design and behavior of notifications. One area where we take advantage of SweetAlert2 is in the contact form, where every form submission receives clear and informative real-time feedback.\n\nWith SweetAlert2, we can display beautiful confirmation messages when a user successfully submits a message via the contact form. If there is an error or a missing field in the form, SweetAlert2 can also display error messages explaining what needs to be corrected, so users don’t have to guess what went wrong. For example, if a required field is empty or an email format is incorrect, SweetAlert2 will give friendly and easy-to-understand feedback. The responsive design and smooth animations make these notifications not only informative but also enjoyable to view."
+    }
   }
 }

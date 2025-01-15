@@ -3,3 +3,9 @@
     <NuxtPage />
   </NuxtLayout>
 </template>
+
+<script setup>
+useHead({
+  title: "Kamareza: My Journey, My Work",
+});
+</script>

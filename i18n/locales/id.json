@@ -9,25 +9,41 @@
   "hero": {
     "hallo": "HALO, SAYA KAMA",
     "profession": "SAYA SEORANG FRONTEND DEVELOPER DAN DESAINER UI",
-    "btn-porto": "LIHAT PORTOFOLIO",
-    "btn-git": "HUBUNGI SAYA"
+    "subhead": "Didorong oleh semangat desain dan pengembangan, setiap proyek kami dirancang dengan presisi untuk memecahkan masalah dunia nyata sekaligus memberikan pengalaman berkesan bagi pengguna.",
+    "btn-porto": "Lihat Karya",
+    "btn-git": "Hubungi Saya"
   },
 
   "service": {
     "fe": "Developer Frontend",
+    "fe-desc": "Membangun situs web yang cepat, responsif, dan dinamis dengan teknologi web terkini untuk memastikan pengalaman pengguna yang lancar di semua perangkat.",
     "ui": "Desain UI",
+    "ui-desc": "Merancang antarmuka modern dan ramah pengguna yang menyeimbangkan estetika dan fungsionalitas, memastikan pengalaman menarik bagi audiens Anda.",
     "dg": "Desainer Grafis",
+    "dg-desc": "Desain grafis yang memukau untuk tingkatkan daya tarik merek. Dari poster hingga aset digital, menjadi solusi lengkap untuk semua kebutuhan visual bisnis.",
     "btn-explore": "Jelajahi Lainnya",
     "from": "DARI",
     "vision": "VISI",
     "to": "KE",
     "visual": "VISUAL",
     "and": "DAN",
+    "paragraph-1": "Pengalaman digital dimulai dari sebuah ide sederhana, namun mewujudkannya membutuhkan perpaduan kreativitas, strategi, dan inovasi. Setiap solusi diawali dengan memahami kebutuhan pengguna dan tujuan bisnis, kemudian diterjemahkan ke dalam desain intuitif dan produk fungsional. Setiap antarmuka dirancang untuk menarik perhatian, setiap interaksi dirancang untuk menjaga keterlibatan pengguna, dan setiap elemen dioptimalkan untuk memberikan nilai nyata.",
+    "paragraph-2": "Dalam lanskap digital yang berkembang pesat saat ini, keseimbangan antara bentuk dan fungsi sangatlah penting. Proyek yang sukses tidak hanya terlihat bagus — tetapi juga memecahkan masalah, meningkatkan kegunaan, dan meningkatkan pengalaman secara keseluruhan. Dari situs web hingga aplikasi, setiap proyek dibangun dengan presisi dan tujuan untuk mengubah ide-ide kompleks menjadi solusi sederhana, elegan, dan berdampak yang mendorong hasil yang berarti.",
     "beyond": "LEBIH JAUH"
   },
 
   "tech": {
-    "read": "Selengkapnya"
+    "tech-behind": "TEKNOLOGI DI BALIK PROYEK INI",
+    "read": "Selengkapnya",
+    "nuxt-3": {
+      "description": "Nuxt adalah framework sumber terbuka yang membuat pengembangan web menjadi intuitif dan kuat. Buat aplikasi web dan situs web full-stack yang berkinerja tinggi dan siap produksi dengan percaya diri."
+    },
+    "tailwind": {
+      "description": "Tailwind CSS adalah framework CSS berbasis utilitas yang memungkinkan pengembang untuk membangun antarmuka pengguna yang sangat dapat disesuaikan dan responsif dengan cepat. Dengan menggunakan kelas utilitas yang sudah didefinisikan sebelumnya langsung di HTML Anda, Tailwind menghilangkan kebutuhan untuk"
+    },
+    "sweetalert": {
+      "description": "SweetAlert2 adalah pustaka JavaScript yang digunakan untuk membuat pop-up menarik dan interaktif di halaman web, dengan desain yang modern dan dapat disesuaikan."
+    }
   },
 
   "img-header": {
@@ -80,6 +96,7 @@
   },
 
   "about": {
+    "desc-section": "Setiap proyek menghadirkan peluang untuk mengubah ide menjadi produk digital yang berdampak. Dengan memadukan kreativitas, ketelitian, dan teknologi terkini, Mengembangkan situs web yang tidak hanya memiliki estetika yang menakjubkan tetapi juga memberikan kinerja yang luar biasa. Misi saya adalah menciptakan pengalaman digital yang memikat dan menginspirasi pengguna. Membangun kehadiran online yang kuat melampaui daya tarik visual; ini tentang menciptakan interaksi yang bermakna yang meninggalkan kesan abadi. Dari antarmuka intuitif hingga perjalanan pengguna yang mulus, setiap elemen dirancang dengan tujuan. Merangkul sifat dinamis teknologi memastikan solusi kami tetap relevan, skalabel, dan siap menghadapi masa depan. Didorong oleh semangat untuk memecahkan masalah dan dedikasi untuk perbaikan berkelanjutan, saya mendekati setiap proyek dengan rasa ingin tahu dan inovasi. Tujuan saya adalah mengubah tantangan kompleks menjadi solusi sederhana, elegan, dan mendorong kesuksesan di dunia digital.",
     "about": "Tentang Saya",
     "tab": {
       "header": "KARIR PROFESIONAL & RIWAYAT PENDIDIKAN",
@@ -87,5 +104,41 @@
       "education": "Pendidikan"
     },
     "tool": "KEAHLIAN & ALAT YANG DIGUNAKAN"
+  },
+
+  "experience": {
+    "tcid": {
+      "jobdesc-1": "Mengembangkan landing page.",
+      "jobdesc-2": "Menggunakan Bootstrap dan Tailwind CSS untuk styling website.",
+      "jobdesc-3": "Membangun website menggunakan Nuxt 3 dan Laravel 11.",
+      "jobdesc-4": "Membuat presentasi laporan bulanan menggunakan PowerPoint dengan data dari Google Analytics.",
+      "jobdesc-5": "Memantau keberhasilan atau kegagalan SMS pada website.",
+      "jobdesc-6": "Membuat dokumen seperti BRD (Business Requirements Document), use case, diagram aktivitas, knowledge base, dan lainnya."
+    },
+    "bgi": {
+      "jobdesc-1": "Mengomunikasikan informasi tentang masalah mesin ke cabang yang relevan.",
+      "jobdesc-2": "Meringkas penjelasan dari tim cabang berdasarkan laporan tindak lanjut mereka.",
+      "jobdesc-3": "Mempertahankan komunikasi dengan setiap cabang melalui chat Telegram atau panggilan telepon.",
+      "jobdesc-4": "Menyusun data pemantauan secara berkala sesuai dengan format dan pedoman perusahaan.",
+      "jobdesc-5": "Membuat laporan pemantauan harian.",
+      "jobdesc-6": "Membuat laporan pemeliharaan tingkat kedua harian.",
+      "jobdesc-7": "Mencatat dan melaporkan masalah mesin yang kritis, seperti kerusakan suku cadang, kepada kepala divisi."
+    }
+  },
+
+  "post": {
+    "back": "Kembali",
+    "nuxt-3": {
+      "title": "Nuxt 3",
+      "description": "Website ini dibangun dengan menggunakan Nuxt 3, sebuah framework modern yang berbasis pada Vue.js dan dirancang khusus untuk memudahkan pembuatan aplikasi web yang cepat, efisien, dan ramah SEO. Nuxt 3 menawarkan berbagai fitur unggulan yang membuatnya menjadi pilihan ideal bagi pengembang yang ingin membangun aplikasi web yang performanya tinggi dan dapat diakses dengan mudah oleh pengguna. Salah satu keunggulan utama dari Nuxt 3 adalah kemampuannya untuk melakukan server-side rendering (SSR), yang memungkinkan halaman-halaman website dimuat dengan lebih cepat dan lebih efisien. Ini tidak hanya meningkatkan pengalaman pengguna, tetapi juga membantu dalam optimasi mesin pencari (SEO), membuat website lebih mudah ditemukan di berbagai platform pencarian. Dengan semua kemudahan dan fitur canggih yang ditawarkan oleh Nuxt 3, saya dapat membangun website ini dengan lebih efisien, menghasilkan performa tinggi, dan memastikan website berjalan dengan mulus di berbagai perangkat. Keuntungan lainnya adalah kemampuan untuk melakukan pre-rendering dan optimasi gambar secara otomatis, yang semakin mempercepat waktu muat halaman dan meningkatkan performa secara keseluruhan. Website ini tidak hanya dirancang untuk memberikan pengalaman yang luar biasa bagi pengunjung, tetapi juga dibangun dengan teknologi yang memudahkan perawatan dan pengembangan lebih lanjut di masa depan. Jadi, saat Anda mengunjungi website ini, Anda tidak hanya melihat desain yang menarik, tetapi juga merasakan kecepatan dan kestabilan yang dihasilkan dari penggunaan Nuxt 3 sebagai fondasi utama."
+    },
+    "tailwind": {
+      "title": "Tailwind",
+      "description": "Website ini dibangun dengan menggunakan Tailwind CSS, sebuah framework CSS utility-first yang memungkinkan saya untuk mendesain antarmuka dengan lebih cepat, fleksibel, dan terstruktur. Tailwind CSS menawarkan pendekatan yang berbeda dibandingkan dengan framework CSS lainnya, karena ia memberikan serangkaian kelas utility yang bisa langsung digunakan di HTML. Dengan menggunakan Tailwind, saya dapat mengatur margin, padding, warna, tipografi, dan banyak elemen desain lainnya dengan cara yang sangat efisien tanpa perlu menulis CSS custom. Hal ini memungkinkan pengembangan website yang lebih cepat, serta memberikan kontrol penuh atas desain tanpa harus menulis kode CSS yang panjang dan kompleks. Desain yang responsif dan dinamis dapat dibuat hanya dengan menggunakan kelas-kelas yang telah disediakan oleh Tailwind, sehingga website ini bisa tampil sempurna di berbagai perangkat, dari desktop hingga ponsel pintar.\n\nSelain itu, untuk membuat website lebih interaktif dan dinamis, saya juga memanfaatkan v-bind dari Vue.js. v-bind memungkinkan kita untuk mengikat data dinamis ke atribut HTML, seperti kelas CSS, ID, atau gaya inline, secara langsung dari komponen Vue. Dengan menggabungkan v-bind dan Tailwind CSS, saya bisa membuat elemen-elemen dalam website bereaksi terhadap interaksi pengguna secara real-time. Misalnya, kita bisa mengubah warna, ukuran, atau bahkan efek transisi suatu elemen berdasarkan kondisi tertentu atau aksi pengguna, seperti hover atau klik. Pendekatan ini membuat website terasa lebih hidup dan responsif terhadap input pengguna, menciptakan pengalaman yang lebih interaktif dan menarik."
+    },
+    "sweetalert": {
+      "title": "Sweet Alert 2",
+      "description": "Pada website ini, kami menggunakan SweetAlert2, sebuah library JavaScript yang sangat populer untuk menampilkan notifikasi yang menarik dan interaktif. SweetAlert2 memberikan pengalaman pengguna yang lebih baik dibandingkan dengan alert standar browser karena tampilannya yang lebih menarik dan interaktif, serta memberikan kontrol penuh atas desain dan perilaku notifikasi. Salah satu area di mana kami memanfaatkan SweetAlert2 adalah pada form kontak, di mana setiap pengisian form akan mendapatkan feedback langsung yang jelas dan informatif.\n\nDengan SweetAlert2, kami bisa memberikan pesan konfirmasi yang cantik ketika pengguna berhasil mengirimkan pesan melalui form kontak. Jika ada kesalahan atau kekurangan dalam pengisian form, SweetAlert2 juga bisa menampilkan pesan error yang menjelaskan apa yang perlu diperbaiki, sehingga pengguna tidak perlu menebak-nebak apa yang salah. Misalnya, jika ada kolom yang wajib diisi atau format email yang salah, SweetAlert2 akan memberikan umpan balik dengan cara yang ramah dan mudah dimengerti. Desain yang responsif dan animasi yang smooth membuat notifikasi ini tidak hanya informatif, tetapi juga menyenangkan untuk dilihat."
+    }
   }
 }
