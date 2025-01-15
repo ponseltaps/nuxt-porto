@@ -131,8 +131,8 @@ const getHiddenTags = (tags) => {
           class="flex flex-col items-center justify-center bg-sky-950 rounded-xl px-4 py-6 gap-4"
         >
           <!-- Gambar Kartu -->
-          <a href="#">
-            <NuxtImg :src="card.image" format="webp" class="h-40 hover:scale-150 transition-transform duration-300" />
+          <a href="#" class="flex flex-col items-center">
+            <NuxtImg :src="card.image" format="webp" class="h-40 hover:scale-125 transition-transform duration-300" />
 
             <!-- Judul Kartu -->
             <h3 class="text-sky-400 text-xl popp-bold">{{ card.title }}</h3>
