@@ -1,13 +1,11 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 
-// Filter aktif
-const activeFilter = ref("all"); // Default filter
+const activeFilter = ref("all");
 const setFilter = (filter) => {
   activeFilter.value = filter;
 };
 
-// Array data kartu
 const cards = ref([
   {
     id: 1,
@@ -15,6 +13,7 @@ const cards = ref([
     image: "/mockup-laptop.png",
     tags: ["Nuxt 3", "Tailwind", "Flowbite", "Sweet Alert"],
     filter: "web-dev",
+    link: "/",
   },
   {
     id: 2,
@@ -22,32 +21,49 @@ const cards = ref([
     image: "/travel-screen.png",
     tags: ["Figma", "UI/UX"],
     filter: "ui-des",
+    link: "https://www.figma.com/design/4xs8Rk6N0Ik8GY8sNkoLDV/On-Boarding-Travel-Ticket-Booking-App?node-id=6-2353&t=NmwBmL4L3CxVRtJP-1",
   },
+
   {
     id: 3,
-    title: "Graphic Design Portfolio",
-    image: "/mockup-laptop.png",
-    tags: ["Illustrator", "Photoshop", "Figma", "Branding"],
+    title: "Typography Design",
+    image: "/november-post.jpg",
+    tags: ["Photoshop"],
     filter: "graphic-des",
+    link: "https://pin.it/6mxctqfHs",
   },
   {
     id: 4,
-    title: "Personal Website 2",
+    title: "Landing Page",
     image: "/personal-web-2.png",
     tags: ["HTML", "Bootstrap", "JS", "Css"],
     filter: "web-dev",
+    link: "https://portofoliokamareza.web.app/",
+  },
+  {
+    id: 5,
+    title: "Mony Wallet",
+    image: "/mony-wallet.png",
+    tags: ["Figma", "UI/UX"],
+    filter: "ui-des",
+    link: "https://www.figma.com/design/CLekxOUGXOEaUsQx2hsV0M/Kamareza_Mony-UI?node-id=30-95&t=9maiOBzZORyu0yY9-1",
+  },
+  {
+    id: 6,
+    title: "Company Landing Page",
+    image: "/indf-page.png",
+    tags: ["HTML", "Bootstrap", "JS", "Materialize","Css"],
+    filter: "web-dev",
+    link: "https://indfluxsablon.com/",
   },
 ]);
 
-// Variabel untuk menyimpan lebar layar
 const windowWidth = ref(0);
 
-// Fungsi untuk memonitor perubahan ukuran layar
 const updateWindowWidth = () => {
   windowWidth.value = window.innerWidth;
 };
 
-// Menggunakan onMounted untuk menambahkan event listener
 onMounted(() => {
   if (typeof window !== "undefined") {
     windowWidth.value = window.innerWidth;
@@ -55,24 +71,20 @@ onMounted(() => {
   }
 });
 
-// Menggunakan onBeforeUnmount untuk membersihkan event listener
 onBeforeUnmount(() => {
   if (typeof window !== "undefined") {
     window.removeEventListener("resize", updateWindowWidth);
   }
 });
 
-// Menentukan jumlah elemen yang akan ditampilkan berdasarkan lebar layar
 const displayedTagsCount = computed(() => {
-  return windowWidth.value < 890 ? 2 : 3; // Menampilkan 2 elemen jika lebar layar < 890px, 3 jika lebih
+  return windowWidth.value < 890 ? 2 : 3;
 });
 
-// Menampilkan tag yang sesuai berdasarkan jumlah yang ditentukan
 const getDisplayedTags = (tags) => {
   return tags.slice(0, displayedTagsCount.value);
 };
 
-// Menampilkan sisa tag
 const getHiddenTags = (tags) => {
   return tags.slice(displayedTagsCount.value);
 };
@@ -80,8 +92,8 @@ const getHiddenTags = (tags) => {
 
 <template>
   <div class="pt-0 min-[1105px]:px-[133px] md:px-16 px-8 mt-2 mb-16">
+    <!-- Filter Buttons -->
     <div class="flex md:flex-row flex-col justify-center gap-4 px-4 py-4 border-b-2 border-b-white text-white">
-      <!-- Filter Buttons -->
       <button
         @click="setFilter('all')"
         :class="[
@@ -123,22 +135,18 @@ const getHiddenTags = (tags) => {
     <div class="mt-14">
       <h2 class="text-center popp-bold text-3xl text-sky-800">{{ $t("porto.my-work") }}</h2>
       <div class="grid content-center md:grid-cols-2 grid-cols-1 gap-12 mt-14">
-        <!-- Looping untuk menampilkan kartu berdasarkan filter -->
         <div
           v-for="card in cards"
           :key="card.id"
           v-show="activeFilter === 'all' || activeFilter === card.filter"
           class="flex flex-col items-center justify-center bg-sky-950 rounded-xl px-4 py-6 gap-4"
         >
-          <!-- Gambar Kartu -->
-          <a href="#" class="flex flex-col items-center">
+          <a :href="card.link" class="flex flex-col items-center">
             <NuxtImg :src="card.image" format="webp" class="h-40 hover:scale-125 transition-transform duration-300" />
 
-            <!-- Judul Kartu -->
-            <h3 class="text-sky-400 text-xl popp-bold">{{ card.title }}</h3>
+            <h3 class="text-sky-400 text-xl popp-bold mt-2">{{ card.title }}</h3>
           </a>
 
-          <!-- Menampilkan Tag -->
           <div class="flex flex-row w-full justify-between">
             <p class="grow flex space-x-2 text-sky-800">
               <span
@@ -148,7 +156,6 @@ const getHiddenTags = (tags) => {
               >
                 {{ tag }}
               </span>
-              <!-- Badge "More" -->
               <span v-if="getHiddenTags(card.tags).length > 0" class="font-popp text-xs bg-sky-200 px-3 py-1 rounded">
                 <span
                   class="inline-flex items-center justify-center w-4 h-4 me-1 text-[10px] font-semibold text-blue-800 bg-white rounded-full"
@@ -159,8 +166,7 @@ const getHiddenTags = (tags) => {
               </span>
             </p>
 
-            <!-- Icon Action -->
-            <a href="#" class="hover:rotate-45 hover:scale-125 duration-200">
+            <a :href="card.link" class="hover:rotate-45 hover:scale-125 duration-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
