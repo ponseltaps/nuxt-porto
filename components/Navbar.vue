@@ -2,8 +2,8 @@
   <nav class="relative">
     <div
       :class="{
-        'bg-opacity-50 backdrop-blur-lg w-full md:px-24 px-4': isScrolled && windowWidth >= 640, // Efek kaca saat scroll di atas 640px
-        'max-w-[1100px] px-6 lg:rounded-b-lg': !isScrolled, // Maksimal lebar 1100px saat tidak scroll
+        'bg-opacity-50 backdrop-blur-lg w-full md:px-24 px-4': isScrolled && windowWidth >= 640,
+        'max-w-[1100px] px-6 lg:rounded-b-lg': !isScrolled,
       }"
       class="mx-auto fixed z-[999] top-0 left-0 right-0 bg-white rounded-b-none lg:drop-shadow transition-all duration-300"
     >
@@ -47,12 +47,11 @@
         <div class="sm:flex hidden flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex shrink-0 items-center">
             <NuxtLink to="/">
-              <NuxtImg src="/logo-brand.svg" alt="logo" class="h-8 object-contain" />
+              <NuxtImg src="/logo-brand.png" alt="logo" class="h-8 object-contain" />
             </NuxtLink>
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <!-- Saya ingin ketika aktif pada sebuah page memiliki class "border-b-2 border-sky-800 text-sm mont-semibold text-sky-800" -->
               <NuxtLink
                 to="/"
                 :class="{
@@ -137,7 +136,6 @@
                 id="flag-icon-css-id"
                 viewBox="0 0 512 512"
               >
-                <!-- SVG untuk Indonesia -->
                 <g fill-rule="evenodd">
                   <path fill="#e30a17" d="M0 0h512v256H0z" />
                   <path fill="#fff" d="M0 256h512v256H0z" />
@@ -146,7 +144,6 @@
               {{ language === "en" ? "English (US)" : "Indonesia" }}
             </button>
 
-            <!-- Dropdown untuk memilih bahasa -->
             <div
               v-if="menus.language"
               class="origin-top-right w-max absolute right-0 mt-5 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
@@ -213,64 +210,11 @@
               </ul>
             </div>
           </div>
-
-          <!-- Profile btn -->
-          <!-- <div class="relative ml-3">
-            <button
-              type="button"
-              class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-              id="user-menu-button"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
-              <span class="sr-only">Open user menu</span>
-              <img
-                class="w-8 h-8 rounded-full"
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt="avatar"
-                @click="toggleMenu('profile')"
-              />
-            </button>
-            <div
-              v-if="menus.profile"
-              class="origin-top-right absolute right-0 mt-5 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="options-menu"
-            >
-              <div class="p-2" role="none">
-                <div class="flex w-full items-center space-x-2 px-2 py-2 pb-4 border-b-2 mb-2">
-                  <img
-                    alt="MAPCLUB"
-                    loading="lazy"
-                    width="40"
-                    height="40"
-                    decoding="async"
-                    data-nimg="1"
-                    class="bx-shadow"
-                    src="#"
-                  />
-                  <div class="gap-0">
-                    <div class="flex items-center space-x-3">
-                      <span class="truncate text-sm font-bold text-gray-900">0 Points</span>
-                    </div>
-                    <a class="truncate text-xs text-gray-500 hover:underline" target="_blank" href="#"
-                      >Lihat Kartu Saya</a
-                    >
-                  </div>
-                </div>
-                <a
-                  class="block px-2 py-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-100 hover:text-gray-900 w-full text-left"
-                  href="#"
-                  >Sign Out</a
-                >
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>
 
+    <!-- Navlink Mobile -->
     <div v-if="menus.mobile" class="fixed sm:hidden bg-white w-full drop-shadow" id="mobile-menu">
       <div class="space-y-1 px-2 pb-3">
         <a
@@ -313,7 +257,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { useI18n } from "vue-i18n";
-import { useRoute } from "vue-router"; // Pastikan ini diimport
+import { useRoute } from "vue-router";
 
 // State untuk menu
 const menus = ref({
@@ -349,8 +293,7 @@ const toggleLanguageMenu = () => {
   toggleMenu("language");
 };
 
-const route = useRoute(); // Mendapatkan informasi rute saat ini
-// Fungsi untuk memeriksa apakah path saat ini cocok dengan path yang diberikan
+const route = useRoute();
 const isActive = (path) => {
   return route.path === path;
 };
@@ -358,7 +301,6 @@ const isActive = (path) => {
 const isScrolled = ref(false);
 const windowWidth = ref(0);
 
-// Mengatur ulang lebar jendela saat ukuran layar berubah
 const updateWindowWidth = () => {
   windowWidth.value = window.innerWidth;
 };
@@ -369,18 +311,16 @@ const handleScroll = () => {
 
 onMounted(() => {
   if (import.meta.client) {
-    // Pastikan akses ke window hanya dilakukan di sisi klien
     windowWidth.value = window.innerWidth;
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", updateWindowWidth); // Mendengarkan perubahan ukuran jendela
+    window.addEventListener("resize", updateWindowWidth);
   }
 });
 
 onUnmounted(() => {
   if (import.meta.client) {
-    // Pastikan untuk menghapus event listener hanya di sisi klien
     window.removeEventListener("scroll", handleScroll);
-    window.removeEventListener("resize", updateWindowWidth); // Membersihkan event listener
+    window.removeEventListener("resize", updateWindowWidth);
   }
 });
 </script>

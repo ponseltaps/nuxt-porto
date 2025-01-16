@@ -13,13 +13,11 @@
           <div
             class="absolute hidden md:group-hover:block w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-sky-200/30 backdrop-blur-sm p-2"
           >
-            <!-- Teks untuk di atas layar md -->
             <p class="text-center popp-bold text-sm text-sky-800">
               {{ tool.name }}
             </p>
           </div>
         </div>
-        <!-- Teks untuk di bawah md -->
         <div class="md:hidden flex mt-4">
           <p class="text-center popp-bold text-sm text-sky-800">
             {{ tool.name }}

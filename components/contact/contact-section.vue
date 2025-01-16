@@ -3,11 +3,9 @@ import { ref, reactive } from "vue";
 import { useI18n } from "vue-i18n";
 import Swal from "sweetalert2";
 import imgBackground from "~/assets/images/get-touch-bg.jpg";
-import ButtonSolid from "../button-solid.vue";
 
 const { t } = useI18n();
 
-// Reactive form data and errors
 const form = reactive({
   name: "",
   phone: "",
@@ -22,7 +20,6 @@ const errors = reactive({
   message: "",
 });
 
-// Validation function for each field
 const validateField = (field) => {
   switch (field) {
     case "name":
@@ -68,14 +65,10 @@ const validateField = (field) => {
   }
 };
 
-// Handle form submission
 const handleSubmit = (event) => {
   event.preventDefault();
 
   if (validateForm()) {
-    console.log(t("alert.title"));  // Log nilai title
-    console.log(t("alert.description"));  // Log nilai description
-
     Swal.fire({
       title: t("contact.alert.title"),
       text: t("contact.alert.description"),
@@ -91,11 +84,9 @@ const handleSubmit = (event) => {
   }
 };
 
-// Validate all fields before submission
 const validateForm = () => {
   let isValid = true;
 
-  // Validate each field
   Object.keys(form).forEach((field) => {
     validateField(field);
     if (errors[field]) isValid = false;
@@ -124,7 +115,7 @@ const validateForm = () => {
               fill="white" />
             <path d="M9 0V1.97L11 3.4V2H20V16H16V18H22V0H9Z" fill="white" />
           </svg>
-          <span class="ml-3 text-white font-popp text-sm">Jl. 1 lorem ipsu. Kec Dolor. Kota Ngidul</span>
+          <span class="ml-3 text-white font-popp text-sm">Jatijajar 1 RT 02/04, Kec. Tapos, Kota Depok, Jawa Barat</span>
         </div>
         <div class="flex flex-row">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,14 +123,14 @@ const validateForm = () => {
               d="M3.54 2C3.6 2.89 3.75 3.76 3.99 4.59L2.79 5.79C2.38 4.59 2.12 3.32 2.03 2H3.54ZM13.4 14.02C14.25 14.26 15.12 14.41 16 14.47V15.96C14.68 15.87 13.41 15.61 12.2 15.21L13.4 14.02ZM4.5 0H1C0.45 0 0 0.45 0 1C0 10.39 7.61 18 17 18C17.55 18 18 17.55 18 17V13.51C18 12.96 17.55 12.51 17 12.51C15.76 12.51 14.55 12.31 13.43 11.94C13.331 11.903 13.2256 11.886 13.12 11.89C12.86 11.89 12.61 11.99 12.41 12.18L10.21 14.38C7.37547 12.9303 5.06966 10.6245 3.62 7.79L5.82 5.59C6.1 5.31 6.18 4.92 6.07 4.57C5.69132 3.41789 5.4989 2.21274 5.5 1C5.5 0.45 5.05 0 4.5 0Z"
               fill="white" />
           </svg>
-          <span class="ml-3 text-white font-popp text-sm">+62 895 1200 9988</span>
+          <span class="ml-3 text-white font-popp text-sm">+62 851-5628-7045</span>
         </div>
         <div class="flex flex-row">
           <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 0H0.00999999L0 16H20V0ZM18 14H2V4L10 9L18 4V14ZM10 7L2 2H18L10 7Z" fill="white" />
           </svg>
 
-          <span class="ml-3 text-white font-popp text-sm">kamareza@gmail.com</span>
+          <span class="ml-3 text-white font-popp text-sm">kamareza.worker@gmail.com</span>
         </div>
       </div>
     </div>
@@ -183,7 +174,6 @@ const validateForm = () => {
           <p v-if="errors.message" class="mt-1 text-xs text-red-500">{{ errors.message }}</p>
         </div>
         <div class="mt-9">
-          <!-- <ButtonSolid>{{ t('contact.submit') }}</ButtonSolid> -->
           <button type="submit"
             class="rounded-lg bg-sky-800 hover:bg-sky-700 text-white lg:text-base text-sm popp-semibold px-6 py-4">
             {{ t("contact.submit") }}

@@ -128,7 +128,6 @@
 <script setup>
 import { ref } from 'vue';
 
-// Menyimpan tab yang aktif, default ke 'experience'
 const mainActiveTab = ref('experience');
 
 const experienceTabs = ref([
