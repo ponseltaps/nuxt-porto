@@ -9,7 +9,7 @@ const setFilter = (filter) => {
 const cards = ref([
   {
     id: 1,
-    title: "Personal Website",
+    title: "Nuxt Website",
     image: "/images/mockup-laptop.png",
     tags: ["Nuxt 3", "Tailwind", "Flowbite", "Sweet Alert"],
     filter: "web-dev",
@@ -55,6 +55,14 @@ const cards = ref([
     tags: ["HTML", "Bootstrap", "JS", "Materialize","Css"],
     filter: "web-dev",
     link: "https://indfluxsablon.com/",
+  },
+  {
+    id: 7,
+    title: "Nuxt Website UI",
+    image: "/images/nuxt-web-ui.png",
+    tags: ["Figma", "UI/UX", "Clay Mockup"],
+    filter: "ui-des",
+    link: "https://www.figma.com/design/5q5GqlbCQ31pNh28VwsPVm/Nuxt-Website---Personal-web?node-id=0-1&t=aCyTAWkNt0Zi2nMi-1",
   },
 ]);
 
