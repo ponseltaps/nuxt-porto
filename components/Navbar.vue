@@ -47,7 +47,7 @@
         <div class="sm:flex hidden flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex shrink-0 items-center">
             <NuxtLink to="/">
-              <NuxtImg src="/logo-brand.png" alt="logo" class="h-8 object-contain" />
+              <NuxtImg src="/images/logo-brand.png" alt="logo" class="h-8 object-contain" />
             </NuxtLink>
           </div>
           <div class="hidden sm:ml-6 sm:block">
@@ -221,7 +221,7 @@
           href="/"
           class="block rounded-md px-3 py-2 text-sm font-semibold text-sky-800"
           :class="{
-            'bg-sky-200': isActive('/'),
+            'bg-sky-200 mt-[70px]': isActive('/'),
           }"
           >{{ $t("navbar.home") }}</a
         >

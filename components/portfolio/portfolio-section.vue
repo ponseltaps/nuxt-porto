@@ -10,7 +10,7 @@ const cards = ref([
   {
     id: 1,
     title: "Personal Website",
-    image: "/mockup-laptop.png",
+    image: "/images/mockup-laptop.png",
     tags: ["Nuxt 3", "Tailwind", "Flowbite", "Sweet Alert"],
     filter: "web-dev",
     link: "/",
@@ -18,7 +18,7 @@ const cards = ref([
   {
     id: 2,
     title: "Travel Onboard Screen",
-    image: "/travel-screen.png",
+    image: "/images/travel-screen.png",
     tags: ["Figma", "UI/UX"],
     filter: "ui-des",
     link: "https://www.figma.com/design/4xs8Rk6N0Ik8GY8sNkoLDV/On-Boarding-Travel-Ticket-Booking-App?node-id=6-2353&t=NmwBmL4L3CxVRtJP-1",
@@ -27,7 +27,7 @@ const cards = ref([
   {
     id: 3,
     title: "Typography Design",
-    image: "/november-post.jpg",
+    image: "/images/november-post.jpg",
     tags: ["Photoshop"],
     filter: "graphic-des",
     link: "https://pin.it/6mxctqfHs",
@@ -35,7 +35,7 @@ const cards = ref([
   {
     id: 4,
     title: "Landing Page",
-    image: "/personal-web-2.png",
+    image: "/images/personal-web-2.png",
     tags: ["HTML", "Bootstrap", "JS", "Css"],
     filter: "web-dev",
     link: "https://portofoliokamareza.web.app/",
@@ -43,7 +43,7 @@ const cards = ref([
   {
     id: 5,
     title: "Mony Wallet",
-    image: "/mony-wallet.png",
+    image: "/images/mony-wallet.png",
     tags: ["Figma", "UI/UX"],
     filter: "ui-des",
     link: "https://www.figma.com/design/CLekxOUGXOEaUsQx2hsV0M/Kamareza_Mony-UI?node-id=30-95&t=9maiOBzZORyu0yY9-1",
@@ -51,7 +51,7 @@ const cards = ref([
   {
     id: 6,
     title: "Company Landing Page",
-    image: "/indf-page.png",
+    image: "/images/indf-page.png",
     tags: ["HTML", "Bootstrap", "JS", "Materialize","Css"],
     filter: "web-dev",
     link: "https://indfluxsablon.com/",
@@ -141,7 +141,7 @@ const getHiddenTags = (tags) => {
           v-show="activeFilter === 'all' || activeFilter === card.filter"
           class="flex flex-col items-center justify-center bg-sky-950 rounded-xl px-4 py-6 gap-4"
         >
-          <a :href="card.link" class="flex flex-col items-center">
+          <a :href="card.link" class="flex flex-col items-center" target="_blank">
             <NuxtImg :src="card.image" format="webp" class="h-40 hover:scale-125 transition-transform duration-300" />
 
             <h3 class="text-sky-400 text-xl popp-bold mt-2">{{ card.title }}</h3>
@@ -166,7 +166,7 @@ const getHiddenTags = (tags) => {
               </span>
             </p>
 
-            <a :href="card.link" class="hover:rotate-45 hover:scale-125 duration-200">
+            <a :href="card.link" class="hover:rotate-45 hover:scale-125 duration-200" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

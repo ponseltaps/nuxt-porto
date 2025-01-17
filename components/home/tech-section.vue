@@ -52,9 +52,9 @@ import { useI18n } from "vue-i18n";
 const { t, locale } = useI18n();
 
 const techList = ref([
-  { title: "Nuxt 3", slug: "nuxt-3", image: "/nuxt-logo.svg" },
-  { title: "Tailwind", slug: "tailwind", image: "/tailwind-logo.svg" },
-  { title: "Sweet Alert 2", slug: "sweetalert", image: "/sweetalert-logo.svg" },
+  { title: "Nuxt 3", slug: "nuxt-3", image: "/images/nuxt-logo.svg" },
+  { title: "Tailwind", slug: "tailwind", image: "/images/tailwind-logo.svg" },
+  { title: "Sweet Alert 2", slug: "sweetalert", image: "/images/sweetalert-logo.svg" },
 ]);
 
 const updateDescriptions = () => {

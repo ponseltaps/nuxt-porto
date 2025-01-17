@@ -30,17 +30,17 @@
 
 <script setup>
 const cardTool = [
-  { src: "/figma-icon.svg", name: "Figma" },
-  { src: "/nuxt-icon.svg", name: "Nuxt 3" },
-  { src: "/laravel-logo.svg", name: "Laravel" },
-  { src: "/bootstrap-logo.svg", name: "Bootstrap" },
-  { src: "/css-3-logo.svg", name: "Css" },
-  { src: "/html-logo.svg", name: "Html" },
-  { src: "/figma-icon.svg", name: "Figma" },
-  { src: "/nuxt-icon.svg", name: "Nuxt 3" },
-  { src: "/bootstrap-logo.svg", name: "Bootstrap" },
-  { src: "/nuxt-icon.svg", name: "Nuxt 3" },
-  { src: "/laravel-logo.svg", name: "Laravel" },
-  { src: "/html-logo.svg", name: "Html" },
+  { src: "/images/figma-icon.svg", name: "Figma" },
+  { src: "/images/nuxt-icon.svg", name: "Nuxt 3" },
+  { src: "/images/laravel-logo.svg", name: "Laravel" },
+  { src: "/images/bootstrap-logo.svg", name: "Bootstrap" },
+  { src: "/images/css-3-logo.svg", name: "Css" },
+  { src: "/images/html-logo.svg", name: "Html" },
+  { src: "/images/figma-icon.svg", name: "Figma" },
+  { src: "/images/nuxt-icon.svg", name: "Nuxt 3" },
+  { src: "/images/bootstrap-logo.svg", name: "Bootstrap" },
+  { src: "/images/nuxt-icon.svg", name: "Nuxt 3" },
+  { src: "/images/laravel-logo.svg", name: "Laravel" },
+  { src: "/images/html-logo.svg", name: "Html" },
 ];
 </script>

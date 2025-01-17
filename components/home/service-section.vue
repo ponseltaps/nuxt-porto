@@ -9,7 +9,7 @@ import buttonSolid from '../button-solid.vue';
             <div class="flex flex-col md:w-[500px] w-full h-max md:order-1 order-2 bg-sky-950 rounded-xl px-7 py-12 gap-y-7">
                 <div
                     class="card flex items-center self-stretch px-5 py-4 rounded-md gap-x-5 bg-white bg-opacity-50 shadow-[0px_0px_8px_0px_rgba(0,0,0,0.50)_inset]">
-                    <NuxtImg src="/coding-img.png" alt="profile-photo" class="w-24 object-contain" />
+                    <NuxtImg src="/images/coding-img.png" format="webp" alt="profile-photo" class="w-24 object-contain" />
                     <div class="flex flex-col">
                         <p class="text-lg mont-semibold text-sky-800 mb-1">{{ $t("service.fe") }}</p>
                         <p class="text-xs popp-light text-sky-100">{{ $t("service.fe-desc") }}</p>
@@ -17,7 +17,7 @@ import buttonSolid from '../button-solid.vue';
                 </div>
                 <div
                     class="card flex items-center self-stretch px-5 py-4 rounded-md gap-x-5 bg-white bg-opacity-50 shadow-[0px_0px_8px_0px_rgba(0,0,0,0.50)_inset]">
-                    <NuxtImg src="/web-ui.png" alt="profile-photo" class="w-24 object-contain" />
+                    <NuxtImg src="/images/web-ui.png" format="webp" alt="profile-photo" class="w-24 object-contain" />
                     <div class="flex flex-col">
                         <p class="text-lg mont-semibold text-sky-800 mb-1">{{ $t("service.ui") }}</p>
                         <p class="text-xs popp-light text-sky-100">{{ $t("service.ui-desc") }}</p>
@@ -25,7 +25,7 @@ import buttonSolid from '../button-solid.vue';
                 </div>
                 <div
                     class="card flex items-center self-stretch px-5 py-4 rounded-md gap-x-5 bg-white bg-opacity-50 shadow-[0px_0px_8px_0px_rgba(0,0,0,0.50)_inset]">
-                    <NuxtImg src="/creative-design.png" alt="profile-photo" class="w-24 object-contain" />
+                    <NuxtImg src="/images/creative-design.png" format="webp" alt="profile-photo" class="w-24 object-contain" />
                     <div class="flex flex-col">
                         <p class="text-lg mont-semibold text-sky-800 mb-1">{{ $t("service.dg") }}</p>
                         <p class="text-xs popp-light text-sky-100">{{ $t("service.dg-desc") }}</p>

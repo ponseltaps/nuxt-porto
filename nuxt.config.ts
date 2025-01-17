@@ -10,14 +10,12 @@ export default defineNuxtConfig({
     },
   },
 
+  plugins: ["~/plugins/sweetalert2.js", "~/plugins/flowbite.js"],
+
+  modules: ["@nuxtjs/i18n", "@nuxt/image", "@nuxthub/core"],
   image: {
-    dir: "assets/images",
+    // dir: "assets/images",
   },
-
-  plugins: ["~/plugins/sweetalert2.js", "~/plugins/flowbite.js",],
-
-  modules: ["@nuxtjs/i18n", "@nuxt/image"],
-
   i18n: {
     strategy: "no_prefix",
     defaultLocale: "en",
