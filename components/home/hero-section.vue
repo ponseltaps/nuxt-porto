@@ -1,17 +1,66 @@
 <script setup>
-import buttonBOutline from '../button-b-outline.vue';
-import buttonSolid from '../button-solid.vue';
+import buttonBOutline from "../button-b-outline.vue";
+import buttonSolid from "../button-solid.vue";
+
+import { ref, onMounted, onServerPrefetch } from "vue";
+import { useI18n } from "vue-i18n"; // Untuk mengatur bahasa
+
+// State untuk menyimpan data hero
+const heroData = ref(null);
+
+// Mendapatkan bahasa yang aktif
+const { locale } = useI18n();
+const language = ref(locale.value);
+
+// Fungsi untuk mengubah bahasa
+const changeLanguage = async (lang) => {
+  language.value = lang;
+  locale.value = lang;
+  await fetchHeroData(lang); // Panggil data baru sesuai bahasa
+};
+
+// Fungsi untuk mengambil data hero dari API Laravel menggunakan fetch
+const fetchHeroData = async (lang) => {
+  try {
+    // Menggunakan fetch untuk mengambil data dari API Laravel
+    const response = await fetch('http://localhost:8000/home/hero');
+    if (!response.ok) {
+      throw new Error("Failed to fetch data");
+    }
+    const data = await response.json();
+
+    // Menyimpan data hero
+    heroData.value = {
+      greeting: data[`hero_greeting_${lang}`],
+      title: data[`hero_title_${lang}`],
+      description: data[`hero_desc_${lang}`],
+      img: data.hero_img, // Gambar hero
+    };
+  } catch (error) {
+    console.error("Error fetching hero data:", error);
+  }
+};
+
+// Mengambil data hero pada server side render (SSR)
+onServerPrefetch(async () => {
+  await fetchHeroData(language.value); // Panggil data hero berdasarkan bahasa yang aktif
+});
+
+// Mengambil data hero pada client side setelah mounted
+onMounted(() => {
+  fetchHeroData(language.value);
+});
 </script>
 
 <template>
   <div
-    class="md:h-screen lg:pt-0 pt-24 min-[1105px]:px-[133px] md:px-16 px-8 bg-gradient-to-b from-sky-100 via-sky-300 to-sky-500">
+    class="md:h-screen lg:pt-0 pt-24 min-[1105px]:px-[133px] md:px-16 px-8 bg-gradient-to-b from-sky-100 via-sky-300 to-sky-500"
+  >
     <div class="flex flex-row h-full">
       <div class="flex flex-col justify-center lg:w-1/2 md:w-3/4 w-full">
-        <h3 class="text-xl mont-semibold text-sky-800 mb-6">{{ $t("hero.hallo") }}</h3>
-        <h2 class="text-3xl mont-bold text-sky-800 mb-12 whitespace-pre-line">{{ $t("hero.profession") }}</h2>
-        <p class="text-base popp-medium text-sky-800 mb-12">{{ $t("hero.subhead") }}
-        </p>
+        <h3 class="text-xl mont-semibold text-sky-800 mb-6">{{ heroData?.greeting }}</h3>
+        <h2 class="text-3xl mont-bold text-sky-800 mb-12 whitespace-pre-line">{{ heroData?.title }}</h2>
+        <p class="text-base popp-medium text-sky-800 mb-12">{{ heroData?.description  }}</p>
         <div class="mb-4 flex sm:flex-none flex-col sm:flex-row">
           <buttonSolid href="/portfolio" class="w-fit mb-5 sm:mb-0">
             {{ $t("hero.btn-porto") }}
@@ -22,8 +71,12 @@ import buttonSolid from '../button-solid.vue';
         </div>
       </div>
       <div class="md:flex hidden -mr-10 justify-end items-end md:w-1/2 w-1/4">
-        <NuxtImg src="/images/foto-hero.svg" format="webp" alt="profile-photo"
-          class="hover:hover:-translate-y-4 drop-shadow-md lg:w-[400px] max-[1105px]:w-[300px] md:w-[250px] object-contain transition-transform duration-300" />
+        <NuxtImg
+          src="/images/foto-hero.svg"
+          format="webp"
+          alt="profile-photo"
+          class="hover:hover:-translate-y-4 drop-shadow-md lg:w-[400px] max-[1105px]:w-[300px] md:w-[250px] object-contain transition-transform duration-300"
+        />
       </div>
     </div>
   </div>
