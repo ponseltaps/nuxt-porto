@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     // dir: "assets/images",
   },
   i18n: {
-    strategy: "no_prefix",
+    strategy: "prefix",
     defaultLocale: "en",
     locales: [
       {
@@ -33,5 +33,10 @@ export default defineNuxtConfig({
     ],
     lazy: true,
     langDir: "locales",
+  },
+  runtimeConfig: {
+    public: {
+      apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL || "http://localhost:8000",
+    },
   },
 });
