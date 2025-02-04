@@ -67,11 +67,11 @@ import { useI18n } from "vue-i18n";
 const { locale } = useI18n();
 const language = ref(locale.value);
 
-const { $apiFetch } = useNuxtApp();
 const heroData = ref([]);
 const loading = ref(true);
 
 // Mengambil data dari API setelah komponen dimuat di sisi klien
+const { $apiFetch } = useNuxtApp();
 onMounted(async () => {
   try {
     const response = await $apiFetch("/api/home/hero");
@@ -82,7 +82,7 @@ onMounted(async () => {
   } catch (err) {
     console.error("Error fetching hero data:", err);
   } finally {
-    loading.value = false; // Setelah data selesai atau error, ubah loading ke false
+    loading.value = false;
   }
 });
 
