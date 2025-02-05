@@ -1,24 +1,42 @@
 <template>
   <div class="relative ml-3 z-20">
-    <button type="button"
-      class="inline-flex items-center font-semibold justify-center px-4 py-2 text-sm text-sky-800 rounded-lg cursor-pointer bg-sky-300/50 "
-      @click="toggleLanguageMenu">
-      <svg v-if="language === 'en'" aria-hidden="true" class="h-5 w-5 rounded-full me-2"
-        xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-us" viewBox="0 0 512 512">
+    <button
+      type="button"
+      class="inline-flex items-center font-semibold justify-center px-4 py-2 text-sm text-sky-800 rounded-lg cursor-pointer bg-sky-300/50"
+      @click="toggleLanguageMenu"
+    >
+      <svg
+        v-if="language === 'en'"
+        aria-hidden="true"
+        class="h-5 w-5 rounded-full me-2"
+        xmlns="http://www.w3.org/2000/svg"
+        id="flag-icon-css-us"
+        viewBox="0 0 512 512"
+      >
         <g fill-rule="evenodd">
           <g stroke-width="1pt">
-            <path fill="#bd3d44"
+            <path
+              fill="#bd3d44"
               d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
-              transform="scale(3.9385)" />
-            <path fill="#fff"
+              transform="scale(3.9385)"
+            />
+            <path
+              fill="#fff"
               d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
-              transform="scale(3.9385)" />
+              transform="scale(3.9385)"
+            />
           </g>
           <path fill="#192f5d" d="M0 0h98.8v70H0z" transform="scale(3.9385)" />
         </g>
       </svg>
-      <svg v-if="language === 'id'" aria-hidden="true" class="h-5 w-5 rounded-full me-2"
-        xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-id" viewBox="0 0 512 512">
+      <svg
+        v-if="language === 'id'"
+        aria-hidden="true"
+        class="h-5 w-5 rounded-full me-2"
+        xmlns="http://www.w3.org/2000/svg"
+        id="flag-icon-css-id"
+        viewBox="0 0 512 512"
+      >
         <!-- SVG untuk Indonesia -->
         <g fill-rule="evenodd">
           <path fill="#e30a17" d="M0 0h512v256H0z" />
@@ -29,24 +47,39 @@
     </button>
 
     <!-- Dropdown untuk memilih bahasa -->
-    <div v-if="menus.language"
+    <div
+      v-if="menus.language"
       class="origin-top-right w-max absolute right-0 mt-5 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-      role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+      role="menu"
+      aria-orientation="vertical"
+      aria-labelledby="options-menu"
+    >
       <ul class="py-2 font-medium" role="none">
         <li>
-          <div @click="changeLanguage('en')"
+          <div
+            @click="changeLanguage('en')"
             class="cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-            role="menuitem">
+            role="menuitem"
+          >
             <div class="inline-flex items-center">
-              <svg aria-hidden="true" class="h-3.5 w-3.5 rounded-full me-2" xmlns="http://www.w3.org/2000/svg"
-                id="flag-icon-css-us" viewBox="0 0 512 512">
+              <svg
+                aria-hidden="true"
+                class="h-3.5 w-3.5 rounded-full me-2"
+                xmlns="http://www.w3.org/2000/svg"
+                id="flag-icon-css-us"
+                viewBox="0 0 512 512"
+              >
                 <g fill-rule="evenodd">
-                  <path fill="#bd3d44"
+                  <path
+                    fill="#bd3d44"
                     d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
-                    transform="scale(3.9385)" />
-                  <path fill="#fff"
+                    transform="scale(3.9385)"
+                  />
+                  <path
+                    fill="#fff"
                     d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
-                    transform="scale(3.9385)" />
+                    transform="scale(3.9385)"
+                  />
                 </g>
                 <path fill="#192f5d" d="M0 0h98.8v70H0z" transform="scale(3.9385)" />
               </svg>
@@ -55,12 +88,19 @@
           </div>
         </li>
         <li>
-          <div @click="changeLanguage('id')"
+          <div
+            @click="changeLanguage('id')"
             class="cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-            role="menuitem">
+            role="menuitem"
+          >
             <div class="inline-flex items-center">
-              <svg aria-hidden="true" class="h-3.5 w-3.5 rounded-full me-2" xmlns="http://www.w3.org/2000/svg"
-                id="flag-icon-css-id" viewBox="0 0 512 512">
+              <svg
+                aria-hidden="true"
+                class="h-3.5 w-3.5 rounded-full me-2"
+                xmlns="http://www.w3.org/2000/svg"
+                id="flag-icon-css-id"
+                viewBox="0 0 512 512"
+              >
                 <g fill-rule="evenodd">
                   <path fill="#e30a17" d="M0 0h512v256H0z" />
                   <path fill="#fff" d="M0 256h512v256H0z" />
@@ -79,23 +119,18 @@
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 
-// Menggunakan useI18n untuk mengakses fungsi i18n
 const { setLocale, locale } = useI18n();
-const language = ref(locale.value);  // Menyimpan bahasa yang sedang aktif
-
-// Menyembunyikan menu dropdown setelah pemilihan
+const language = ref(locale.value); 
 const menus = ref({
   language: false, // menu tertutup
 });
 
-// Fungsi untuk mengubah bahasa tanpa reload halaman
 const changeLanguage = (lang) => {
-  setLocale(lang);  // Mengubah bahasa
-  language.value = lang;  // Memperbarui state bahasa
-  menus.value.language = false; // Menutup dropdown
+  setLocale(lang);
+  language.value = lang;
+  menus.value.language = false;
 };
 
-// Fungsi untuk toggle dropdown menu bahasa
 const toggleLanguageMenu = () => {
   menus.value.language = !menus.value.language;
 };
