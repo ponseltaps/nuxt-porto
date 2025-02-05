@@ -3,7 +3,7 @@
     <div v-if="loading" class="min-[1105px]:px-[133px] md:px-16 px-8 mt-[70px] mb-28">
         <div class="flex md:flex-row flex-col justify-between items-center w-full gap-x-6">
             <!-- card service -->
-            <div class="animate-pulse">
+            <div class="animate-pulse md:mb-0 mb-6">
                 <div
                     class="flex flex-col md:w-[500px] w-full h-max md:order-1 order-2 bg-sky-400 rounded-xl px-7 py-12 gap-y-7">
                     <div class="bg-sky-300 flex items-center self-stretch px-5 py-4 rounded-xl">
@@ -57,16 +57,13 @@
             <div
                 class="flex flex-col md:w-[500px] w-full h-max md:order-1 order-2 bg-sky-950 rounded-xl px-7 py-12 gap-y-7">
                 <div v-for="service in services" :key="service.id"
-                    class="card flex items-center self-stretch px-5 py-4 rounded-md gap-x-5 bg-white bg-opacity-50 shadow-[0px_0px_8px_0px_rgba(0,0,0,0.50)_inset]">
-                    <!-- Menampilkan gambar layanan -->
+                    class="card flex flex-col sm:flex-row items-center self-stretch px-5 py-4 rounded-md gap-x-5 bg-white bg-opacity-50 shadow-[0px_0px_8px_0px_rgba(0,0,0,0.50)_inset]">
                     <NuxtImg :src="getImageUrl(service.service_img)" format="webp" alt="service image"
                         class="w-24 object-contain" />
                     <div class="flex flex-col">
-                        <!-- Menampilkan judul layanan sesuai dengan bahasa aktif -->
                         <h3 class="text-lg mont-semibold text-sky-800 mb-1">
                             {{ language === 'en' ? service.service_title_en : service.service_title_id }}
                         </h3>
-                        <!-- Menampilkan deskripsi layanan sesuai dengan bahasa aktif -->
                         <p class="text-xs popp-light text-sky-100">
                             {{ language === 'en' ? service.service_desc_en : service.service_desc_id }}
                         </p>
@@ -101,23 +98,19 @@ import buttonSolid from '../button-solid.vue';
 const { locale } = useI18n();
 const language = ref(locale.value);
 
-// State untuk data layanan, teks deskripsi dan loading
 const services = ref([]);
 const serviceText = ref(null);
 const loading = ref(true);
 
-// Mengambil data dari API untuk layanan (services)
 const { $apiFetch } = useNuxtApp();
 onMounted(async () => {
     try {
-        // Ambil data layanan
         const servicesResponse = await $apiFetch("/api/home/service");
         if (!servicesResponse.ok) {
             throw new Error("Network response for services was not ok");
         }
         services.value = await servicesResponse.json();
 
-        // Ambil data teks deskripsi layanan
         const textResponse = await $apiFetch("/api/home/service-text");
         if (!textResponse.ok) {
             throw new Error("Network response for service-text was not ok");
