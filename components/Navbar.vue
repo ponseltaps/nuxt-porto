@@ -140,7 +140,7 @@
     </div>
 
     <!-- Navlink Mobile -->
-    <div v-if="menus.mobile" class="fixed sm:hidden bg-white w-full drop-shadow" id="mobile-menu">
+    <div v-if="menus.mobile" class="fixed sm:hidden bg-white w-full drop-shadow z-[999]" id="mobile-menu">
       <div class="space-y-1 px-2 pb-3">
         <a href="/" class="block rounded-md px-3 py-2 text-sm font-semibold text-sky-800" :class="{
           'bg-sky-200 mt-[70px]': isActive('/'),

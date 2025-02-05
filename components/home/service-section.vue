@@ -2,7 +2,6 @@
     <!-- Skeleton Loader -->
     <div v-if="loading" class="min-[1105px]:px-[133px] md:px-16 px-8 mt-[70px] mb-28">
         <div class="flex md:flex-row flex-col justify-between items-center w-full gap-x-6">
-            <!-- card service -->
             <div class="animate-pulse md:mb-0 mb-6">
                 <div
                     class="flex flex-col md:w-[500px] w-full h-max md:order-1 order-2 bg-sky-400 rounded-xl px-7 py-12 gap-y-7">
@@ -34,7 +33,6 @@
                 </div>
             </div>
 
-            <!-- Description service -->
             <div
                 class="flex flex-col justify-center md:w-[430px] w-full md:order-2 order-1 md:mb-0 mb-12 animate-pulse">
                 <div class="h-12 w-full bg-sky-400 rounded-xl">
