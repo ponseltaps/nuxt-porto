@@ -38,39 +38,48 @@
             <!-- Content experience tab -->
             <div v-if="mainActiveTab === 'experience'" id="experience-tab"
                 class="flex md:flex-row flex-col bg-sky-950 rounded-b-2xl py-12 md:mt-6 mt-3">
+
                 <div class="tab-btn">
                     <div class="link-tabs flex flex-col items-start w-max mr-12 space-y-4 border-l-4">
-                        <button v-if="experienceTabs.length" v-for="tab in experienceTabs" :key="tab.expTab"
-                            @click="experienceActiveTab = tab.expTab">
+                        <!-- Tombol ini hanya akan muncul jika data experienceTabs ada -->
+                        <button v-if="experienceTabs && experienceTabs.length" v-for="tab in experienceTabs"
+                            :key="tab.expTab" @click="experienceActiveTab = tab.expTab">
+                            <!-- expTab nanti akan diubah menjadi slug dari database -->
                             <div :class="{ 'border-sky-400': experienceActiveTab === tab.expTab }"
                                 class="border-l-4 py-2 px-5 -ml-1">
                                 <p :class="{ 'text-sky-400': experienceActiveTab === tab.expTab }"
                                     class="text-sky-200 text-base popp-bold">
+                                    <!-- Menampilkan data dari 'company' -->
                                     {{ tab.name }}
                                 </p>
                             </div>
                         </button>
                     </div>
                 </div>
+
                 <div class="block md:hidden py-5">
-                    <hr class="border-1 border-sky-400 ">
+                    <hr class="border-1 border-sky-400 " />
                 </div>
+
                 <div class="container-tab-content">
-                    <!-- Looping tabs -->
-                    <div v-if="experienceTabs.length" v-for="tab in experienceTabs" :key="tab.expTab + '-experience'">
+                    <div v-if="experienceTabs && experienceTabs.length" v-for="tab in experienceTabs"
+                        :key="tab.expTab + '-experience'">
                         <div v-if="experienceActiveTab === tab.expTab"
                             class="tab-content md:border-l-2 pr-12 border-sky-400">
                             <div class="flex flex-col text-sky-400 mb-4 ml-4 space-y-1">
-                                <h3 class="popp-bold text-xl">{{ tab.name }}</h3>
-                                <p class="popp-medium text-sm">{{ tab.position }}</p>
-                                <p class="popp-medium text-sm">{{ tab.period }}</p>
+                                <h3 class="popp-bold text-xl">
+                                    {{ tab.name }}
+                                </h3>
+                                <p class="popp-medium text-sm">
+                                    {{ tab.position }}
+                                </p>
+                                <p class="popp-medium text-sm">
+                                    {{ tab.period }}
+                                </p>
                             </div>
+
                             <div class="ml-4">
-                                <ul class="flex flex-col text-sky-200 font-popp ml-4 list-outside list-disc space-y-2">
-                                    <li v-for="(desc, key) in jobDescriptions[tab.expTab]" :key="key" class="text-xs">
-                                        {{ desc }}
-                                    </li>
-                                </ul>
+                                <div v-html="jobDescriptions[experienceActiveTab]?.[language]"></div>
                             </div>
                         </div>
                     </div>
@@ -83,11 +92,12 @@
                     <div class="link-tabs flex flex-col items-start w-max mr-12 space-y-4 border-l-4">
                         <button v-if="educationTabs.length" v-for="tabEdu in educationTabs" :key="tabEdu.eduTab"
                             @click="educationActiveTab = tabEdu.eduTab">
+                            <!-- Berisi tombol nama pendidikan -->
                             <div :class="{ 'border-sky-400': educationActiveTab === tabEdu.eduTab }"
                                 class="border-l-4 py-2 px-5 -ml-1">
                                 <p :class="{ 'text-sky-400': educationActiveTab === tabEdu.eduTab }"
                                     class="text-sky-200 text-base popp-bold">
-                                    {{ tabEdu.name }}
+                                    {{ tabEdu.name }} <!-- Nama pendidikan -->
                                 </p>
                             </div>
                         </button>
@@ -98,81 +108,135 @@
                 </div>
                 <div class="container-tab-content">
                     <div class="education-content">
+                        <!-- eduTab berdasarkan 'slug' -->
                         <div v-if="educationTabs.length" v-for="tab in educationTabs" :key="tab.eduTab + '-education'">
                             <div v-if="educationActiveTab === tab.eduTab"
                                 class="tab-content md:border-l-2 pr-12 border-sky-400">
                                 <div class="flex flex-col text-sky-400 mb-4 ml-4 space-y-1">
-                                    <h3 class="popp-bold text-xl">{{ tab.name }}</h3>
-                                    <p class="popp-medium text-sm">{{ tab.major }}</p>
-                                    <p class="popp-medium text-sm">{{ tab.location }}</p>
+                                    <h3 class="popp-bold text-xl">
+                                        <!-- Menampilkan data 'education_name' -->
+                                        {{ tab.name }}
+                                    </h3>
+                                    <p class="popp-medium text-sm">
+                                        <!-- Menampilkan data 'degree_level' -->
+                                        {{ tab.degree }}
+                                    </p>
+                                    <p class="popp-medium text-sm">
+                                        <!-- Menampilkan data 'location' -->
+                                        {{ tab.location }}
+                                    </p>
                                 </div>
-                                <div class=" ml-4">
-                                    <ul
-                                        class="flex flex-col text-sky-200 font-popp ml-4 list-outside list-disc space-y-2">
-                                        <li v-for="(learning, key) in eduDescriptions[tab.eduTab]" :key="key"
-                                            class="text-xs">
-                                            {{ learning }}
-                                        </li>
-                                    </ul>
+                                <div class="ml-4">
+                                    <!-- Menampilkan deskripsi pembelajaran berdasarkan bahasa -->
+                                    <div v-html="tab.description"></div>
                                 </div>
                             </div>
                         </div>
-                        <div v-else class="text-sky-400">No experience data available.</div>
+                        <div v-else class="text-sky-400">No Education data available.</div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </template>
 
+
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { locale } = useI18n();
+const language = ref(locale.value);
+
+const experienceTabs = ref([]);
+const jobDescriptions = ref({});
+
+const experienceActiveTab = ref('');
 
 const mainActiveTab = ref('experience');
 
-const experienceTabs = ref([
-    { name: 'PT Transcosmos Indonesia', expTab: 'tcid', position: 'Fullstack Developer Internship', period: 'September 2024 - Present' },
-    { name: 'PT Bringin Gigantara Indonesia', expTab: 'bgi', position: 'Admin Monitoring ATM Internship', period: 'Desember 2023 - Maret 2024' },
-]);
-const jobDescriptions = ref({
-    bgi: {
-        'jobdesc-1': "Communicate information about machine issues to the relevant branches.",
-        'jobdesc-2': "Summarize the explanations from the branch teams based on their follow-up reports.",
-        'jobdesc-3': "Maintain communication with each branch through Telegram chat or phone calls.",
-        'jobdesc-4': "Compile monitoring data regularly according to the company's format and guidelines",
-        'jobdesc-5': "Create daily monitoring reports.",
-        'jobdesc-6': "Create daily second-level maintenance reports.",
-        'jobdesc-7': "Record and report critical machine issues, such as spare part damage, to the division head."
-    },
-    tcid: {
-        'jobdesc-1': "Develop a landing page.",
-        'jobdesc-2': "Use Bootstrap and Tailwind CSS for styling the website.",
-        'jobdesc-3': "Build the website using Nuxt 3 and Laravel 11.",
-        'jobdesc-4': "Create monthly report presentations using PowerPoint with data from Google Analytics.",
-        'jobdesc-5': "Monitor SMS success or failure on a website.",
-        'jobdesc-6': "Create documents such as BRD (Business Requirements Document), use cases, activity diagrams, knowledge base, and others."
-    }
-});
-const experienceActiveTab = ref('tcid');
+const { $apiFetch } = useNuxtApp();
 
-const educationTabs = ref([
-    { name: 'Politeknik LP3I Jakarta', eduTab: 'lp3i', major: 'Manajemen Informatika', location: 'Kampus Depok, Kota Depok' },
-    { name: 'SMK Al - Asiyah', eduTab: 'alas', major: 'Multimedia', location: 'Cibinong, Kabupaten Bogor' },
-]);
-const eduDescriptions = ref({
-    lp3i: {
-        'learning-1': "Studied UI/UX design for applications and websites.",
-        'learning-2': "Learned web programming using CodeIgniter 4.",
-        'learning-3': "Studied mobile programming with React Native.",
-        'learning-4': "Gained knowledge in database management with MySQL.",
-        'learning-5': "Learned basic office skills",
-    },
-    alas: {
-        'learning-1': "Learned the use of CorelDRAW and Photoshop for graphic design.",
-        'learning-2': "Studied design techniques and layout settings for printing purposes.",
-        'learning-3': "Gained knowledge in audio and video editing.",
-        'learning-4': "Learned the basics of HTML.",
+const formatDate = (dateString) => {
+    const date = new Date(dateString);
+
+    if (isNaN(date)) {
+        console.error(`Invalid date string: ${dateString}`);
+        return dateString;
+    }
+
+    return new Intl.DateTimeFormat(locale.value, {
+        // day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+    }).format(date);
+};
+
+onMounted(async () => {
+    try {
+        const response = await $apiFetch("/api/about/experience");
+
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+
+        if (data && Array.isArray(data) && data.length > 0) {
+            experienceTabs.value = data.map(item => ({
+                name: item.company,
+                expTab: item.slug,
+                position: item.position,
+                period: `${formatDate(item.start_priode)} - ${formatDate(item.end_priode)}`
+            }));
+
+            data.forEach(item => {
+                jobDescriptions.value[item.slug] = {
+                    en: item.jobdesc_en,
+                    id: item.jobdesc_id
+                };
+            });
+
+            if (experienceTabs.value.length > 0) {
+                experienceActiveTab.value = experienceTabs.value[0].expTab;
+            }
+        }
+    } catch (error) {
+        console.error('Error fetching experience data:', error);
     }
 });
-const educationActiveTab = ref('lp3i');
+
+
+const educationTabs = ref([]); // Untuk menampung data pendidikan
+const educationActiveTab = ref(''); // Untuk menentukan tab pendidikan yang aktif
+
+onMounted(async () => {
+    try {
+        // Ambil data pendidikan dari API
+        const response = await $apiFetch("/api/about/education");
+
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+
+        const data = await response.json();
+
+        if (data && Array.isArray(data) && data.length > 0) {
+            educationTabs.value = data.map(item => ({
+                name: item.education_name,  // Nama pendidikan
+                eduTab: item.slug,          // ID tab pendidikan (slug)
+                degree: item.degree_level,  // Tingkat pendidikan (degree level)
+                location: item.location,    // Lokasi pendidikan
+                description: language.value === "en" ? item.learning_desc_en : item.learning_desc_id, // Deskripsi pembelajaran
+            }));
+
+            if (educationTabs.value.length > 0) {
+                educationActiveTab.value = educationTabs.value[0].eduTab;  // Set tab pendidikan aktif pertama
+            }
+        }
+    } catch (error) {
+        console.error('Error fetching education data:', error);
+    }
+});
+
 </script>
